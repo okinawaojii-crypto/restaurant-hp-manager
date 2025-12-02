@@ -234,17 +234,7 @@
                     return;
                 }
                 
-                // 店舗名を入力してもらう
-                const storeName = prompt('店舗名を入力してください（英数字のみ、例: taro-sushi）:');
-                if (!storeName) {
-                    alert('店舗名が入力されませんでした');
-                    return;
-                }
-                
-                // 英数字とハイフンのみに制限
-                const sanitizedName = storeName.toLowerCase().replace(/[^a-z0-9-]/g, '-');
-                
-                if (!confirm(`店舗名: ${sanitizedName}\nこの名前でGitHub Pagesに公開しますか？`)) {
+                if (!confirm('このHTMLをGitHub Pagesに公開しますか？')) {
                     return;
                 }
                 
@@ -260,7 +250,10 @@
                         throw new Error('トークンが入力されませんでした');
                     }
                     
-                    const FILE_PATH = `${sanitizedName}/index.html`;
+                    // タイムスタンプで自動生成
+                    const timestamp = Date.now();
+                    const autoName = `restaurant-${timestamp}`;
+                    const FILE_PATH = `${autoName}/index.html`;
                     
                     // Base64エンコード
                     const content = btoa(unescape(encodeURIComponent(htmlCode)));
@@ -275,7 +268,7 @@
                                 'Content-Type': 'application/json',
                             },
                             body: JSON.stringify({
-                                message: `add: ${sanitizedName} HP`,
+                                message: `add: ${autoName} HP`,
                                 content: content,
                                 branch: 'main'
                             })
@@ -288,7 +281,7 @@
                     }
                     
                     // 成功
-                    const publicUrl = `https://${REPO_OWNER}.github.io/${REPO_NAME}/${sanitizedName}/`;
+                    const publicUrl = `https://${REPO_OWNER}.github.io/${REPO_NAME}/${autoName}/`;
                     setGeneratedUrl(publicUrl);
                     alert(`🎉 公開成功！\n\n数分後に以下のURLでアクセスできます：\n${publicUrl}\n\n※GitHub Pagesの反映に2〜3分かかる場合があります`);
                     
