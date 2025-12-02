@@ -27,19 +27,16 @@
             /* 焼肉の炎イメージ */
             --fire: #9e1b1b;
             --fire-glow: #ff4d4d;
-
             --font-mincho: 'Shippori Mincho B1', serif;
             --font-gothic: 'Noto Sans JP', sans-serif;
             
             --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: var(--font-gothic);
             background-color: var(--bg-color);
@@ -49,7 +46,6 @@
             /* 背景に微妙なノイズを加えて奥行きを出す */
             background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjAzIi8+PC9zdmc+');
         }
-
         /* スクロールバーのカスタマイズ */
         ::-webkit-scrollbar {
             width: 8px;
@@ -64,13 +60,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--gold);
         }
-
         /* 共通タイポグラフィ */
         h1, h2, h3, .logo {
             font-family: var(--font-mincho);
             letter-spacing: 0.1em;
         }
-
         /* =========================================
            ナビゲーション
            ========================================= */
@@ -84,7 +78,6 @@
             transition: var(--transition);
             mix-blend-mode: exclusion; /* 背景とブレンド */
         }
-
         nav.scrolled {
             background: rgba(5, 5, 5, 0.85);
             backdrop-filter: blur(15px);
@@ -92,7 +85,6 @@
             border-bottom: 1px solid rgba(197, 160, 89, 0.1);
             mix-blend-mode: normal;
         }
-
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -100,20 +92,17 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 2rem;
             font-weight: 800;
             color: #fff;
             text-decoration: none;
         }
-
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-
         .nav-links a {
             color: #fff;
             text-decoration: none;
@@ -123,7 +112,6 @@
             padding-bottom: 5px;
             transition: var(--transition);
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -134,15 +122,12 @@
             background: var(--gold);
             transition: var(--transition);
         }
-
         .nav-links a:hover {
             color: var(--gold);
         }
-
         .nav-links a:hover::after {
             width: 100%;
         }
-
         .reserve-btn-nav {
             border: 1px solid var(--gold);
             padding: 0.5rem 1.5rem;
@@ -154,7 +139,6 @@
             background: var(--gold);
             color: #000;
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -163,7 +147,6 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         /* =========================================
            ヒーローセクション
            ========================================= */
@@ -175,7 +158,6 @@
             position: relative;
             overflow: hidden;
         }
-
         /* 煙のような背景エフェクト */
         .hero::before {
             content: '';
@@ -186,12 +168,10 @@
             animation: pulseBg 10s infinite alternate;
             z-index: -1;
         }
-
         @keyframes pulseBg {
             0% { transform: scale(1); opacity: 0.8; }
             100% { transform: scale(1.1); opacity: 1; }
         }
-
         .hero-content {
             position: relative;
             z-index: 2;
@@ -204,7 +184,6 @@
             justify-content: center;
             gap: 4rem;
         }
-
         /* 縦書きタイトル */
         .hero h1 {
             writing-mode: vertical-rl;
@@ -223,7 +202,6 @@
             height: 400px; /* 高さ確保 */
             position: relative; /* 擬似要素の配置基準 */
         }
-
         /* 赤い落款（印鑑）風デザイン */
         .hero h1::after {
             content: '名物';
@@ -246,12 +224,10 @@
             letter-spacing: 0; /* 文字間隔リセット */
             line-height: 1;
         }
-
         .hero-text-group {
             text-align: left;
             animation: fadeInLeft 1.5s ease-out 0.3s backwards;
         }
-
         .hero-subtitle {
             font-family: var(--font-mincho);
             font-size: 1.5rem;
@@ -262,7 +238,6 @@
             padding-bottom: 10px;
             width: fit-content;
         }
-
         .hero-description {
             font-size: 1rem;
             color: #ccc;
@@ -270,12 +245,10 @@
             margin-bottom: 3rem;
             line-height: 2;
         }
-
         .btn-group {
             display: flex;
             gap: 1.5rem;
         }
-
         /* ボタンデザインの刷新 */
         .btn {
             padding: 1rem 2.5rem;
@@ -294,14 +267,12 @@
             border: 1px solid transparent;
             cursor: pointer;
         }
-
         .btn-primary {
             background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
             color: var(--gold);
             border: 1px solid var(--gold);
             box-shadow: 0 0 20px rgba(197, 160, 89, 0.1);
         }
-
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -312,17 +283,14 @@
             background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.2), transparent);
             transition: 0.5s;
         }
-
         .btn-primary:hover {
             box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
             transform: translateY(-3px);
             color: #fff;
         }
-
         .btn-primary:hover::before {
             left: 100%;
         }
-
         .btn-secondary {
             color: #fff;
             border-bottom: 1px solid #fff;
@@ -333,7 +301,6 @@
             color: var(--gold);
             border-color: var(--gold);
         }
-
         /* スクロールダウン */
         .scroll-indicator {
             position: absolute;
@@ -346,21 +313,18 @@
             gap: 10px;
             opacity: 0.6;
         }
-
         .scroll-line {
             width: 1px;
             height: 60px;
             background: linear-gradient(to bottom, #fff, transparent);
             animation: scrollDown 2s infinite;
         }
-
         @keyframes scrollDown {
             0% { transform: scaleY(0); transform-origin: top; }
             50% { transform: scaleY(1); transform-origin: top; }
             51% { transform: scaleY(1); transform-origin: bottom; }
             100% { transform: scaleY(0); transform-origin: bottom; }
         }
-
         /* =========================================
            セクション共通
            ========================================= */
@@ -369,13 +333,11 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 5rem;
             position: relative;
         }
-
         .section-title {
             font-size: 3rem;
             color: #fff;
@@ -398,13 +360,11 @@
             z-index: -1;
             pointer-events: none;
         }
-
         .section-subtitle {
             color: var(--gold);
             font-size: 1rem;
             letter-spacing: 0.2em;
         }
-
         /* =========================================
            特徴セクション (Grid)
            ========================================= */
@@ -413,7 +373,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .feature-card {
             background: linear-gradient(145deg, rgba(20,20,20,0.8), rgba(10,10,10,0.9));
             border: 1px solid rgba(255,255,255,0.05);
@@ -422,7 +381,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .feature-card::before {
             content: '';
             position: absolute;
@@ -433,35 +391,29 @@
             background: var(--gold);
             transition: var(--transition);
         }
-
         .feature-card:hover {
             transform: translateY(-10px);
             background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(15,15,15,0.9));
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
-
         .feature-card:hover::before {
             height: 100%;
         }
-
         .feature-icon {
             font-size: 2.5rem;
             color: var(--gold);
             margin-bottom: 1.5rem;
             opacity: 0.8;
         }
-
         .feature-card h3 {
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #fff;
         }
-
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
-
         /* =========================================
            メニューセクション
            ========================================= */
@@ -472,7 +424,6 @@
             margin-bottom: 4rem;
             flex-wrap: wrap;
         }
-
         .filter-btn {
             background: transparent;
             border: 1px solid rgba(255,255,255,0.1);
@@ -483,20 +434,17 @@
             font-family: var(--font-mincho);
             font-size: 1.1rem;
         }
-
         .filter-btn:hover,
         .filter-btn.active {
             color: var(--gold);
             border-color: var(--gold);
             background: rgba(197, 160, 89, 0.05);
         }
-
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
         }
-
         .menu-item {
             position: relative;
             background: rgba(15, 15, 15, 0.6);
@@ -506,17 +454,14 @@
             opacity: 0;
             transform: translateY(20px);
         }
-
         .menu-item.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         .menu-item:hover {
             background: rgba(25, 25, 25, 0.8);
             border-bottom-color: var(--gold);
         }
-
         .menu-badge {
             position: absolute;
             top: 0;
@@ -531,7 +476,6 @@
         
         .badge-rare { background: #6a4c93; color: #fff; }
         .badge-recommend { background: var(--fire); color: #fff; }
-
         .menu-item h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
@@ -540,19 +484,16 @@
             align-items: baseline;
             flex-wrap: wrap;
         }
-
         .price {
             font-family: var(--font-gothic);
             font-size: 1.2rem;
             color: var(--gold);
             font-weight: 700;
         }
-
         .description {
             font-size: 0.9rem;
             color: var(--text-muted);
         }
-
         /* =========================================
            店舗情報 (Info)
            ========================================= */
@@ -561,14 +502,12 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
         }
-
         .info-card {
             background: rgba(20,20,20,0.5);
             backdrop-filter: blur(10px);
             padding: 3rem;
             border: 1px solid rgba(255,255,255,0.05);
         }
-
         .info-card h3 {
             color: var(--gold);
             font-size: 1.5rem;
@@ -577,32 +516,27 @@
             padding-bottom: 1rem;
             display: inline-block;
         }
-
         .info-item {
             display: flex;
             margin-bottom: 1.5rem;
             align-items: flex-start;
         }
-
         .info-item i {
             color: var(--gold);
             margin-right: 1.5rem;
             margin-top: 0.3rem;
             font-size: 1.1rem;
         }
-
         .label {
             font-size: 0.85rem;
             color: var(--text-muted);
             margin-bottom: 0.3rem;
             display: block;
         }
-
         .value {
             font-size: 1.1rem;
             font-family: var(--font-mincho);
         }
-
         .tel-link {
             color: #fff;
             text-decoration: none;
@@ -610,11 +544,9 @@
             letter-spacing: 0.1em;
             transition: var(--transition);
         }
-
         .tel-link:hover {
             color: var(--gold);
         }
-
         /* =========================================
            モーダル (Reservation)
            ========================================= */
@@ -632,12 +564,10 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-
         .modal.active {
             display: flex;
             opacity: 1;
         }
-
         .modal-content {
             background: #111;
             width: 90%;
@@ -649,7 +579,6 @@
             overflow-y: auto;
             box-shadow: 0 0 50px rgba(197, 160, 89, 0.1);
         }
-
         .modal-close {
             position: absolute;
             top: 1.5rem;
@@ -661,23 +590,19 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
         .modal-close:hover {
             color: var(--fire);
             transform: rotate(90deg);
         }
-
         .form-group {
             margin-bottom: 1.5rem;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             color: var(--gold);
             font-size: 0.9rem;
         }
-
         .form-group input,
         .form-group select {
             width: 100%;
@@ -688,19 +613,16 @@
             font-family: var(--font-gothic);
             transition: var(--transition);
         }
-
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
             border-color: var(--gold);
         }
-
         .time-slots {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             gap: 10px;
         }
-
         .time-slot {
             background: #050505;
             border: 1px solid #333;
@@ -709,11 +631,9 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
         .time-slot:hover:not(.disabled) {
             border-color: var(--gold);
         }
-
         .time-slot.selected {
             background: var(--gold);
             color: #000;
@@ -725,12 +645,10 @@
             cursor: not-allowed;
             background: #000;
         }
-
         .availability {
             font-size: 0.7rem;
             margin-top: 5px;
         }
-
         /* =========================================
            トースト通知 (Notification)
            ========================================= */
@@ -753,16 +671,13 @@
             pointer-events: none;
             min-width: 300px;
         }
-
         .toast.show {
             transform: translateX(-50%) translateY(0);
         }
-
         .toast i {
             color: var(--gold);
             font-size: 1.2rem;
         }
-
         /* =========================================
            フッター
            ========================================= */
@@ -772,36 +687,30 @@
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
-
         .footer-logo {
             font-family: var(--font-mincho);
             font-size: 2.5rem;
             color: #fff;
             margin-bottom: 1rem;
         }
-
         .social-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin: 2rem 0;
         }
-
         .social-links a {
             color: #555;
             font-size: 1.5rem;
             transition: var(--transition);
         }
-
         .social-links a:hover {
             color: var(--gold);
         }
-
         .copyright {
             color: #444;
             font-size: 0.8rem;
         }
-
         /* =========================================
            アニメーション定義
            ========================================= */
@@ -809,12 +718,10 @@
             from { opacity: 0; transform: translateX(-50px); }
             to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes fadeInLeft {
             from { opacity: 0; transform: translateX(50px); }
             to { opacity: 1; transform: translateX(0); }
         }
-
         /* =========================================
            レスポンシブ設定
            ========================================= */
@@ -831,22 +738,18 @@
                 padding: 2rem;
                 border-left: 1px solid #333;
             }
-
             .nav-links.active {
                 right: 0;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 z-index: 1001;
             }
-
             .hero-content {
                 flex-direction: column;
                 gap: 2rem;
                 padding-top: 4rem;
             }
-
             .hero h1 {
                 writing-mode: horizontal-tb; /* スマホでは横書きに戻す */
                 height: auto;
@@ -861,7 +764,6 @@
                 height: 40px;
                 font-size: 0.7rem;
             }
-
             .section-title {
                 font-size: 2rem;
             }
@@ -869,7 +771,6 @@
             .section-header::before {
                 font-size: 4rem;
             }
-
             .hero-subtitle {
                 width: 100%;
                 text-align: center;
@@ -887,7 +788,6 @@
             .btn {
                 width: 100%;
             }
-
             .info-container {
                 grid-template-columns: 1fr;
             }
@@ -904,14 +804,13 @@
                 <li><a href="#features">こだわり</a></li>
                 <li><a href="#menu">お品書き</a></li>
                 <li><a href="#info">店舗情報</a></li>
-                <li><a href="#" class="reserve-btn-nav" onclick="openModal()">ご予約</a></li>
+                <li><a href="javascript:void(0)" class="reserve-btn-nav" onclick="openModal()">ご予約</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-
     <!-- ヒーローセクション -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -924,7 +823,7 @@
                     名古屋北区で織りなす、至福の焼肉体験を。
                 </p>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary" onclick="openModal()">
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()">
                         <span>座席予約</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -939,7 +838,6 @@
             <span style="font-size: 0.7rem; letter-spacing: 2px;">SCROLL</span>
         </div>
     </section>
-
     <!-- 特徴セクション -->
     <section id="features">
         <div class="section-header" data-en="Quality">
@@ -964,7 +862,6 @@
             </div>
         </div>
     </section>
-
     <!-- メニューセクション -->
     <section id="menu">
         <div class="section-header" data-en="Menu">
@@ -979,7 +876,6 @@
             <button class="filter-btn" data-category="meat">赤身</button>
             <button class="filter-btn" data-category="ramen">〆の一杯</button>
         </div>
-
         <div class="menu-grid" id="menuGrid">
             <!-- 名物 -->
             <div class="menu-item" data-category="tonchyan">
@@ -992,7 +888,6 @@
                 <h3><span>塩とんちゃん</span> <span class="price">¥250</span></h3>
                 <p class="description">素材の旨味が際立つ、至高の塩加減</p>
             </div>
-
             <!-- ホルモン -->
             <div class="menu-item" data-category="hormone">
                 <span class="menu-badge badge-recommend">おすすめ</span>
@@ -1008,7 +903,6 @@
                 <h3><span>子袋</span> <span class="price">¥450</span></h3>
                 <p class="description">極太で透き通るピンク色。希少な極上部位</p>
             </div>
-
             <!-- 赤身 -->
             <div class="menu-item" data-category="meat">
                 <h3><span>サガリ</span> <span class="price">¥450</span></h3>
@@ -1019,7 +913,6 @@
                 <h3><span>上ハラミ</span> <span class="price">¥1,000</span></h3>
                 <p class="description">上質な脂と赤身のバランス。売り切れ御免</p>
             </div>
-
             <!-- ラーメン -->
             <div class="menu-item" data-category="ramen">
                 <span class="menu-badge badge-special">復刻</span>
@@ -1032,7 +925,6 @@
             </div>
         </div>
     </section>
-
     <!-- 店舗情報 -->
     <section id="info">
         <div class="section-header" data-en="Access">
@@ -1067,7 +959,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="info-card">
                 <h3>営業時間</h3>
                 <div class="info-item">
@@ -1094,7 +985,6 @@
             </div>
         </div>
     </section>
-
     <!-- 予約モーダル -->
     <div class="modal" id="reservationModal">
         <div class="modal-content">
@@ -1107,22 +997,18 @@
                     <label>お名前</label>
                     <input type="text" id="name" required placeholder="例：武屋 太郎">
                 </div>
-
                 <div class="form-group">
                     <label>電話番号</label>
                     <input type="tel" id="phone" required placeholder="090-0000-0000">
                 </div>
-
                 <div class="form-group">
                     <label>ご希望日（月曜定休）</label>
                     <input type="date" id="date" required>
                 </div>
-
                 <div class="form-group">
                     <label>時間帯</label>
                     <div class="time-slots" id="timeSlots"></div>
                 </div>
-
                 <div class="form-group">
                     <label>人数</label>
                     <select id="guests" required>
@@ -1135,33 +1021,29 @@
                         <option value="6">6名様以上（要電話）</option>
                     </select>
                 </div>
-
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
                     予約を確定する
                 </button>
             </form>
         </div>
     </div>
-
     <!-- トースト通知 -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle"></i>
         <div id="toastMessage"></div>
     </div>
-
     <!-- フッター -->
     <footer>
         <div class="footer-logo">武屋</div>
         <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+            <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="copyright">
             &copy; Takeya Yakiniku. All rights reserved.
         </div>
     </footer>
-
     <script>
         // ナビゲーションスクロール
         window.addEventListener('scroll', () => {
@@ -1172,18 +1054,15 @@
                 nav.classList.remove('scrolled');
             }
         });
-
         // モバイルメニュー
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
-
         mobileMenuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             const icon = mobileMenuToggle.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
         });
-
         // 要素のフェードインアニメーション
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1192,22 +1071,18 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.menu-item, .feature-card').forEach(el => {
             observer.observe(el);
         });
-
         // メニューフィルター機能
         const filterButtons = document.querySelectorAll('.filter-btn');
         const menuItems = document.querySelectorAll('.menu-item');
-
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const category = button.dataset.category;
                 
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-
                 menuItems.forEach(item => {
                     if (category === 'all' || item.dataset.category === category) {
                         item.style.display = 'block';
@@ -1219,7 +1094,6 @@
                 });
             });
         });
-
         // --- トースト通知機能 ---
         function showToast(message) {
             const toast = document.getElementById('toast');
@@ -1230,7 +1104,6 @@
                 toast.classList.remove('show');
             }, 3000);
         }
-
         // --- 予約システム関連 ---
         function openModal() {
             document.getElementById('reservationModal').classList.add('active');
@@ -1238,12 +1111,10 @@
             initializeDatePicker();
             generateTimeSlots();
         }
-
         function closeModal() {
             document.getElementById('reservationModal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-
         function initializeDatePicker() {
             const dateInput = document.getElementById('date');
             const today = new Date();
@@ -1260,7 +1131,6 @@
                 generateTimeSlots();
             });
         }
-
         function generateTimeSlots() {
             const container = document.getElementById('timeSlots');
             container.innerHTML = '';
@@ -1287,7 +1157,6 @@
                     } else if (rand < 0.5) {
                         statusHtml = '<span class="availability" style="color:#ff9800">△</span>';
                     }
-
                     slot.innerHTML = `<div>${timeString}</div>${statusHtml}`;
                     
                     if (!slot.classList.contains('disabled')) {
@@ -1301,7 +1170,6 @@
                 });
             }
         }
-
         function handleReservation(e) {
             e.preventDefault();
             const selectedSlot = document.querySelector('.time-slot.selected');
@@ -1316,19 +1184,16 @@
             closeModal();
             document.getElementById('reservationForm').reset();
         }
-
         // モーダル背景クリックで閉じる
         document.getElementById('reservationModal').addEventListener('click', (e) => {
             if (e.target.id === 'reservationModal') closeModal();
         });
-
         // スムーズスクロール
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const href = this.getAttribute('href');
-                if (!href || href === '#') return; // ここで無効なセレクタを弾く
-
+                if (!href || href === '#' || href === 'javascript:void(0)') return;
+                e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
