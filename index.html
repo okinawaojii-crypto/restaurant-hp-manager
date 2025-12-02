@@ -233,26 +233,65 @@
                     alert('HTMLコードを入力してください');
                     return;
                 }
+                
+                // 店舗名を入力してもらう
+                const storeName = prompt('店舗名を入力してください（英数字のみ、例: taro-sushi）:');
+                if (!storeName) {
+                    alert('店舗名が入力されませんでした');
+                    return;
+                }
+                
+                // 英数字とハイフンのみに制限
+                const sanitizedName = storeName.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+                
+                if (!confirm(`店舗名: ${sanitizedName}\nこの名前でGitHub Pagesに公開しますか？`)) {
+                    return;
+                }
+                
                 setLoading(true);
                 
                 try {
-                    // ファイル名を生成（タイムスタンプから）
-                    const fileName = `restaurant_${Date.now()}.html`;
+                    // GitHub設定
+                    const REPO_OWNER = 'okinawaojii-crypto';
+                    const REPO_NAME = 'restaurant-hp-manager';
+                    const GITHUB_TOKEN = prompt('GitHub Personal Access Token を入力してください:');
                     
-                    // HTMLファイルをダウンロード
-                    const blob = new Blob([htmlCode], { type: 'text/html' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = fileName;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(url);
+                    if (!GITHUB_TOKEN) {
+                        throw new Error('トークンが入力されませんでした');
+                    }
                     
-                    // 成功メッセージ
-                    setGeneratedUrl(`https://okinawaojii-crypto.github.io/restaurant-hp-manager/${fileName}`);
+                    // Repository Dispatch でGitHub Actionsをトリガー
+                    const response = await fetch(
+                        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/dispatches`,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `token ${GITHUB_TOKEN}`,
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/vnd.github.v3+json'
+                            },
+                            body: JSON.stringify({
+                                event_type: 'deploy-restaurant',
+                                client_payload: {
+                                    store_name: sanitizedName,
+                                    html_content: htmlCode
+                                }
+                            })
+                        }
+                    );
+                    
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        throw new Error(`GitHub API エラー (${response.status}): ${errorText}`);
+                    }
+                    
+                    // 成功
+                    const publicUrl = `https://${REPO_OWNER}.github.io/${REPO_NAME}/${sanitizedName}/`;
+                    setGeneratedUrl(publicUrl);
+                    alert(`🎉 デプロイ開始！\n\n数分後に以下のURLでアクセスできます：\n${publicUrl}\n\n※GitHub Actionsの実行とGitHub Pagesの反映に3〜5分かかります`);
+                    
                 } catch (error) {
+                    console.error('公開エラー:', error);
                     alert('公開に失敗しました: ' + error.message);
                 } finally {
                     setLoading(false);
