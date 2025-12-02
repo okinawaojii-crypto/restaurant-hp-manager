@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>飲食店HP自動生成システム | Restaurant HP Generator</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <!-- React & ReactDOM (Development version for better error messages, switch to production later) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel (Latest version) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Lato', sans-serif;
@@ -70,9 +81,32 @@
             background-color: #F3F4F6;
             color: #4B5563;
         }
+        #error-display {
+            display: none;
+            padding: 20px;
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #f87171;
+            margin: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            z-index: 9999;
+            position: relative;
+        }
     </style>
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            const errorDisplay = document.getElementById('error-display');
+            if (errorDisplay) {
+                errorDisplay.style.display = 'block';
+                errorDisplay.textContent = `Error: ${message}\nSource: ${source}:${lineno}:${colno}\nStack: ${error ? error.stack : 'N/A'}`;
+            }
+        };
+    </script>
 </head>
 <body>
+    <div id="error-display"></div>
     <div id="root"></div>
 
     <script type="text/babel">
@@ -88,7 +122,7 @@
                         <h1 className="text-xl font-bold tracking-tight text-gray-900">飲食店HP自動生成システム</h1>
                     </div>
                     <div className="text-sm text-gray-500">
-                        Powered by Gemini & GitHub Pages
+                        Powered by Gemini & GitHub Pages (v4)
                     </div>
                 </div>
             </header>
@@ -173,7 +207,7 @@
                 phone: "",
                 hours: "",
                 geminiApiKey: "AIzaSyA3P-PYzufZsupEeZdxe4AqVID45MWBlek",
-                githubToken: "ghp_k0DYtqjfyin9aHJxaWzYEMYDYP",
+                githubToken: "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",
                 githubUsername: "okinawaojii-crypto",
                 repoName: "restaurant-hp-manager"
             });
