@@ -236,10 +236,8 @@
                 setLoading(true);
                 
                 try {
-                    // ファイル名を生成（店舗名から）
-                    const fileName = restaurantName 
-                        ? `${restaurantName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}.html`
-                        : `restaurant_${Date.now()}.html`;
+                    // ファイル名を生成（タイムスタンプから）
+                    const fileName = `restaurant_${Date.now()}.html`;
                     
                     // HTMLファイルをダウンロード
                     const blob = new Blob([htmlCode], { type: 'text/html' });
@@ -254,7 +252,6 @@
                     
                     // 成功メッセージ
                     setGeneratedUrl(`https://okinawaojii-crypto.github.io/restaurant-hp-manager/${fileName}`);
-                    setStep(4);
                 } catch (error) {
                     alert('公開に失敗しました: ' + error.message);
                 } finally {
@@ -295,120 +292,9 @@
                             </p>
                         </div>
 
-                        {/* Progress Steps */}
-                        <div className="flex justify-center mb-8">
-                            <div className="flex items-center gap-2">
-                                {[1, 2, 3, 4].map((num) => (
-                                    <div key={num} className="flex items-center">
-                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
-                                            step >= num ? 'bg-indigo-600 text-white' : 'bg-gray-300 text-gray-600'
-                                        }`}>
-                                            {num}
-                                        </div>
-                                        {num < 4 && (
-                                            <div className={`w-12 h-1 mx-1 ${
-                                                step > num ? 'bg-indigo-600' : 'bg-gray-300'
-                                            }`} />
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
 
-                        {/* Step 1: 基本情報入力 */}
+                        {/* Step 1: HTMLコード入力 */}
                         {step === 1 && (
-                            <div>
-                                <FormSection title="基本情報" icon={Edit2}>
-                                    <InputField
-                                        label="店舗名"
-                                        value={restaurantName}
-                                        onChange={setRestaurantName}
-                                        placeholder="例: カフェ・ドゥ・パリ"
-                                        required
-                                    />
-                                    <InputField
-                                        label="店舗説明"
-                                        value={description}
-                                        onChange={setDescription}
-                                        placeholder="お店のコンセプトや雰囲気を教えてください"
-                                        type="textarea"
-                                        required
-                                    />
-                                    <InputField
-                                        label="住所"
-                                        value={address}
-                                        onChange={setAddress}
-                                        placeholder="〒123-4567 東京都渋谷区..."
-                                    />
-                                    <InputField
-                                        label="電話番号"
-                                        value={phone}
-                                        onChange={setPhone}
-                                        placeholder="03-1234-5678"
-                                    />
-                                    <InputField
-                                        label="営業時間"
-                                        value={openingHours}
-                                        onChange={setOpeningHours}
-                                        placeholder="11:00-22:00 (定休日: 月曜日)"
-                                    />
-                                </FormSection>
-                                
-                                <div className="flex justify-end">
-                                    <button
-                                        className="btn btn-primary flex items-center gap-2"
-                                        onClick={() => setStep(2)}
-                                        disabled={!restaurantName || !description}
-                                    >
-                                        次へ
-                                        <ArrowRight className="w-5 h-5" />
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Step 2: メニュー情報 */}
-                        {step === 2 && (
-                            <div>
-                                <FormSection title="メニュー情報" icon={Utensils}>
-                                    <InputField
-                                        label="メニュー項目"
-                                        value={menuItems}
-                                        onChange={setMenuItems}
-                                        placeholder="例: ランチセット ¥1,200、パスタコース ¥1,800..."
-                                        type="textarea"
-                                    />
-                                    <InputField
-                                        label="おすすめ・特徴"
-                                        value={specialties}
-                                        onChange={setSpecialties}
-                                        placeholder="自慢の料理や特別なサービスを教えてください"
-                                        type="textarea"
-                                    />
-                                </FormSection>
-                                
-                                <div className="flex justify-between">
-                                    <button
-                                        className="btn bg-gray-300 hover:bg-gray-400 flex items-center gap-2"
-                                        onClick={() => setStep(1)}
-                                    >
-                                        <ArrowLeft className="w-5 h-5" />
-                                        戻る
-                                    </button>
-                                    <button
-                                        className="btn btn-primary flex items-center gap-2"
-                                        onClick={handleGenerate}
-                                        disabled={loading}
-                                    >
-                                        <Rocket className="w-5 h-5" />
-                                        ホームページを生成
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Step 3: HTMLコード入力 */}
-                        {step === 3 && (
                             <div>
                                 <FormSection title="HTMLコード入力" icon={Code}>
                                     <div className="mb-4">
@@ -439,42 +325,35 @@
                                     )}
                                 </FormSection>
                                 
-                                <div className="flex justify-between mt-6">
+                                <div className="flex justify-end gap-4">
                                     <button
-                                        className="btn bg-gray-300 hover:bg-gray-400 flex items-center gap-2"
-                                        onClick={() => setStep(2)}
+                                        className="btn bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2"
+                                        onClick={handlePreview}
+                                        disabled={loading || !htmlCode.trim()}
                                     >
-                                        <ArrowLeft className="w-5 h-5" />
-                                        戻る
+                                        <ExternalLink className="w-5 h-5" />
+                                        プレビュー
                                     </button>
-                                    <div className="flex gap-4">
-                                        <button
-                                            className="btn bg-blue-600 text-white hover:bg-blue-700 flex items-center gap-2"
-                                            onClick={handlePreview}
-                                            disabled={loading}
-                                        >
-                                            <ExternalLink className="w-5 h-5" />
-                                            プレビュー
-                                        </button>
-                                        <button
-                                            className="btn btn-primary flex items-center gap-2"
-                                            onClick={handlePublish}
-                                            disabled={loading}
-                                        >
-                                            <Rocket className="w-5 h-5" />
-                                            ダウンロード & 公開
-                                        </button>
-                                    </div>
+                                    <button
+                                        className="btn btn-primary flex items-center gap-2"
+                                        onClick={handlePublish}
+                                        disabled={loading || !htmlCode.trim()}
+                                    >
+                                        <Rocket className="w-5 h-5" />
+                                        公開
+                                    </button>
                                 </div>
                             </div>
                         )}
 
+
+
                         {/* Loading */}
                         {loading && <LoadingSpinner />}
 
-                        {/* Step 4: 完成 */}
-                        {step === 4 && !loading && generatedUrl && (
-                            <div>
+                        {/* 完成メッセージ */}
+                        {generatedUrl && (
+                            <div className="mt-6">
                                 <SuccessMessage url={generatedUrl} />
                                 
                                 <div className="flex justify-center mt-6">
