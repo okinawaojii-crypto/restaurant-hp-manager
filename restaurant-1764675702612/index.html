@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>とんちゃん焼肉の武屋 - 名古屋市北区の本格ホルモン焼肉</title>
-    <!-- Google Fonts: 高級感のある明朝体と可読性の高いゴシック体 -->
+    <title>ã¨ãã¡ããç¼èã®æ­¦å± - åå¤å±å¸ååºã®æ¬æ ¼ãã«ã¢ã³ç¼è</title>
+    <!-- Google Fonts: é«ç´æã®ããææä½ã¨å¯èª­æ§ã®é«ãã´ã·ãã¯ä½ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* =========================================
-           ベース設定 & 変数
+           ãã¼ã¹è¨­å® & å¤æ°
            ========================================= */
         :root {
             --bg-color: #050505;
@@ -19,12 +19,12 @@
             --text-main: #e0e0e0;
             --text-muted: #888888;
             
-            /* 高級感のあるゴールド */
+            /* é«ç´æã®ããã´ã¼ã«ã */
             --gold: #c5a059;
             --gold-light: #e6c888;
             --gold-gradient: linear-gradient(135deg, #c5a059 0%, #f3dca6 50%, #c5a059 100%);
             
-            /* 焼肉の炎イメージ */
+            /* ç¼èã®çã¤ã¡ã¼ã¸ */
             --fire: #9e1b1b;
             --fire-glow: #ff4d4d;
 
@@ -46,11 +46,11 @@
             color: var(--text-main);
             line-height: 1.8;
             overflow-x: hidden;
-            /* 背景に微妙なノイズを加えて奥行きを出す */
+            /* èæ¯ã«å¾®å¦ãªãã¤ãºãå ãã¦å¥¥è¡ããåºã */
             background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjAzIi8+PC9zdmc+');
         }
 
-        /* スクロールバーのカスタマイズ */
+        /* ã¹ã¯ã­ã¼ã«ãã¼ã®ã«ã¹ã¿ãã¤ãº */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -65,14 +65,14 @@
             background: var(--gold);
         }
 
-        /* 共通タイポグラフィ */
+        /* å±éã¿ã¤ãã°ã©ãã£ */
         h1, h2, h3, .logo {
             font-family: var(--font-mincho);
             letter-spacing: 0.1em;
         }
 
         /* =========================================
-           ナビゲーション
+           ããã²ã¼ã·ã§ã³
            ========================================= */
         nav {
             position: fixed;
@@ -82,7 +82,7 @@
             z-index: 1000;
             padding: 1.5rem 5%;
             transition: var(--transition);
-            mix-blend-mode: exclusion; /* 背景とブレンド */
+            mix-blend-mode: exclusion; /* èæ¯ã¨ãã¬ã³ã */
         }
 
         nav.scrolled {
@@ -146,7 +146,7 @@
         .reserve-btn-nav {
             border: 1px solid var(--gold);
             padding: 0.5rem 1.5rem;
-            border-radius: 0; /* 角張ったデザインに変更 */
+            border-radius: 0; /* è§å¼µã£ããã¶ã¤ã³ã«å¤æ´ */
             transition: var(--transition);
         }
         
@@ -165,7 +165,7 @@
         }
 
         /* =========================================
-           ヒーローセクション
+           ãã¼ã­ã¼ã»ã¯ã·ã§ã³
            ========================================= */
         .hero {
             height: 100vh;
@@ -176,7 +176,7 @@
             overflow: hidden;
         }
 
-        /* 煙のような背景エフェクト */
+        /* çã®ãããªèæ¯ã¨ãã§ã¯ã */
         .hero::before {
             content: '';
             position: absolute;
@@ -197,7 +197,7 @@
             z-index: 2;
             text-align: center;
             padding: 2rem;
-            /* 縦書きレイアウトのための調整 */
+            /* ç¸¦æ¸ãã¬ã¤ã¢ã¦ãã®ããã®èª¿æ´ */
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
@@ -205,7 +205,7 @@
             gap: 4rem;
         }
 
-        /* 縦書きタイトル */
+        /* ç¸¦æ¸ãã¿ã¤ãã« */
         .hero h1 {
             writing-mode: vertical-rl;
             font-size: clamp(4rem, 10vw, 8rem);
@@ -213,20 +213,20 @@
             line-height: 1;
             letter-spacing: 0.2em;
             color: transparent;
-            /* 金箔のようなグラデーション */
+            /* éç®ã®ãããªã°ã©ãã¼ã·ã§ã³ */
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             background-clip: text;
             filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.3));
             animation: fadeInRight 1.5s ease-out;
             margin: 0;
-            height: 400px; /* 高さ確保 */
-            position: relative; /* 擬似要素の配置基準 */
+            height: 400px; /* é«ãç¢ºä¿ */
+            position: relative; /* æ¬ä¼¼è¦ç´ ã®éç½®åºæº */
         }
 
-        /* 赤い落款（印鑑）風デザイン */
+        /* èµ¤ãè½æ¬¾ï¼å°éï¼é¢¨ãã¶ã¤ã³ */
         .hero h1::after {
-            content: '名物';
+            content: 'åç©';
             writing-mode: horizontal-tb;
             display: flex;
             justify-content: center;
@@ -234,7 +234,7 @@
             position: absolute;
             top: -20px;
             right: -20px;
-            font-size: 0.9rem; /* 少し小さくして収まりよくする */
+            font-size: 0.9rem; /* å°ãå°ãããã¦åã¾ããããã */
             background: var(--fire);
             color: #fff;
             width: 60px;
@@ -242,8 +242,8 @@
             border-radius: 50%;
             font-family: var(--font-mincho);
             box-shadow: 0 0 15px var(--fire);
-            white-space: nowrap; /* 改行を防ぐ */
-            letter-spacing: 0; /* 文字間隔リセット */
+            white-space: nowrap; /* æ¹è¡ãé²ã */
+            letter-spacing: 0; /* æå­ééãªã»ãã */
             line-height: 1;
         }
 
@@ -276,7 +276,7 @@
             gap: 1.5rem;
         }
 
-        /* ボタンデザインの刷新 */
+        /* ãã¿ã³ãã¶ã¤ã³ã®å·æ° */
         .btn {
             padding: 1rem 2.5rem;
             font-size: 1rem;
@@ -334,7 +334,7 @@
             border-color: var(--gold);
         }
 
-        /* スクロールダウン */
+        /* ã¹ã¯ã­ã¼ã«ãã¦ã³ */
         .scroll-indicator {
             position: absolute;
             bottom: 2rem;
@@ -362,7 +362,7 @@
         }
 
         /* =========================================
-           セクション共通
+           ã»ã¯ã·ã§ã³å±é
            ========================================= */
         section {
             padding: 8rem 5%;
@@ -384,7 +384,7 @@
             display: inline-block;
         }
         
-        /* タイトル背景の薄い文字 */
+        /* ã¿ã¤ãã«èæ¯ã®èãæå­ */
         .section-header::before {
             content: attr(data-en);
             position: absolute;
@@ -406,7 +406,7 @@
         }
 
         /* =========================================
-           特徴セクション (Grid)
+           ç¹å¾´ã»ã¯ã·ã§ã³ (Grid)
            ========================================= */
         .features-grid {
             display: grid;
@@ -463,7 +463,7 @@
         }
 
         /* =========================================
-           メニューセクション
+           ã¡ãã¥ã¼ã»ã¯ã·ã§ã³
            ========================================= */
         .menu-filters {
             display: flex;
@@ -554,7 +554,7 @@
         }
 
         /* =========================================
-           店舗情報 (Info)
+           åºèæå ± (Info)
            ========================================= */
         .info-container {
             display: grid;
@@ -616,7 +616,7 @@
         }
 
         /* =========================================
-           モーダル (Reservation)
+           ã¢ã¼ãã« (Reservation)
            ========================================= */
         .modal {
             display: none;
@@ -732,7 +732,7 @@
         }
 
         /* =========================================
-           トースト通知 (Notification)
+           ãã¼ã¹ãéç¥ (Notification)
            ========================================= */
         .toast {
             position: fixed;
@@ -764,7 +764,7 @@
         }
 
         /* =========================================
-           フッター
+           ããã¿ã¼
            ========================================= */
         footer {
             background: #000;
@@ -803,7 +803,7 @@
         }
 
         /* =========================================
-           アニメーション定義
+           ã¢ãã¡ã¼ã·ã§ã³å®ç¾©
            ========================================= */
         @keyframes fadeInRight {
             from { opacity: 0; transform: translateX(-50px); }
@@ -816,7 +816,7 @@
         }
 
         /* =========================================
-           レスポンシブ設定
+           ã¬ã¹ãã³ã·ãè¨­å®
            ========================================= */
         @media (max-width: 768px) {
             .nav-links {
@@ -848,7 +848,7 @@
             }
 
             .hero h1 {
-                writing-mode: horizontal-tb; /* スマホでは横書きに戻す */
+                writing-mode: horizontal-tb; /* ã¹ããã§ã¯æ¨ªæ¸ãã«æ»ã */
                 height: auto;
                 font-size: 3.5rem;
                 margin-bottom: 1rem;
@@ -893,18 +893,23 @@
             }
         }
     </style>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6246752921583310"
+         crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <!-- ナビゲーション -->
+    <!-- ããã²ã¼ã·ã§ã³ -->
     <nav id="nav">
         <div class="nav-container">
-            <a href="#home" class="logo">武屋</a>
+            <a href="#home" class="logo">æ­¦å±</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">ホーム</a></li>
-                <li><a href="#features">こだわり</a></li>
-                <li><a href="#menu">お品書き</a></li>
-                <li><a href="#info">店舗情報</a></li>
-                <li><a href="#" class="reserve-btn-nav" onclick="openModal()">ご予約</a></li>
+                <li><a href="#home">ãã¼ã </a></li>
+                <li><a href="#features">ãã ãã</a></li>
+                <li><a href="#menu">ãåæ¸ã</a></li>
+                <li><a href="#info">åºèæå ±</a></li>
+                <li><a href="#" class="reserve-btn-nav" onclick="openModal()">ãäºç´</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
@@ -912,20 +917,20 @@
         </div>
     </nav>
 
-    <!-- ヒーローセクション -->
+    <!-- ãã¼ã­ã¼ã»ã¯ã·ã§ã³ -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>武屋</h1>
+            <h1>æ­¦å±</h1>
             <div class="hero-text-group">
-                <span class="hero-subtitle">創業五十四年、継承される味。</span>
+                <span class="hero-subtitle">åµæ¥­äºååå¹´ãç¶æ¿ãããå³ã</span>
                 <p class="hero-description">
-                    一宮で愛され続けた屋台の味と、<br>
-                    厳選された極上のホルモン。<br>
-                    名古屋北区で織りなす、至福の焼肉体験を。
+                    ä¸å®®ã§æããç¶ããå±å°ã®å³ã¨ã<br>
+                    å³é¸ãããæ¥µä¸ã®ãã«ã¢ã³ã<br>
+                    åå¤å±ååºã§ç¹ããªããè³ç¦ã®ç¼èä½é¨ãã
                 </p>
                 <div class="btn-group">
                     <a href="#" class="btn btn-primary" onclick="openModal()">
-                        <span>座席予約</span>
+                        <span>åº§å¸­äºç´</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="tel:052-919-6006" class="btn btn-secondary">
@@ -940,114 +945,114 @@
         </div>
     </section>
 
-    <!-- 特徴セクション -->
+    <!-- ç¹å¾´ã»ã¯ã·ã§ã³ -->
     <section id="features">
         <div class="section-header" data-en="Quality">
-            <h2 class="section-title">武屋のこだわり</h2>
+            <h2 class="section-title">æ­¦å±ã®ãã ãã</h2>
             <p class="section-subtitle">TRADITION AND QUALITY</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-fire"></i></div>
-                <h3>鮮度への執着</h3>
-                <p>岐阜より直送される新鮮なホルモンを、店主自ら一つ一つ厳選。当日〜2日分の仕入れのみを行い、最高の状態でお客様へ提供します。</p>
+                <h3>é®®åº¦ã¸ã®å·ç</h3>
+                <p>å²éããç´éãããæ°é®®ãªãã«ã¢ã³ããåºä¸»èªãä¸ã¤ä¸ã¤å³é¸ãå½æ¥ã2æ¥åã®ä»å¥ãã®ã¿ãè¡ããæé«ã®ç¶æã§ãå®¢æ§ã¸æä¾ãã¾ãã</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-utensils"></i></div>
-                <h3>秘伝のタレ</h3>
-                <p>創業より受け継がれる自家製味噌ダレ。「北区で一番旨い」と称される塩とんちゃん。素材の味を最大限に引き出します。</p>
+                <h3>ç§ä¼ã®ã¿ã¬</h3>
+                <p>åµæ¥­ããåãç¶ãããèªå®¶è£½å³åãã¬ããååºã§ä¸çªæ¨ããã¨ç§°ãããå¡©ã¨ãã¡ãããç´ æã®å³ãæå¤§éã«å¼ãåºãã¾ãã</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-bowl-food"></i></div>
-                <h3>屋台の継承</h3>
-                <p>一宮で45年続いた伝説の屋台ラーメン。あっさりとした醤油ベースのスープは、濃厚な焼肉の〆に最適です。</p>
+                <h3>å±å°ã®ç¶æ¿</h3>
+                <p>ä¸å®®ã§45å¹´ç¶ããä¼èª¬ã®å±å°ã©ã¼ã¡ã³ããã£ããã¨ããé¤æ²¹ãã¼ã¹ã®ã¹ã¼ãã¯ãæ¿åãªç¼èã®ãã«æé©ã§ãã</p>
             </div>
         </div>
     </section>
 
-    <!-- メニューセクション -->
+    <!-- ã¡ãã¥ã¼ã»ã¯ã·ã§ã³ -->
     <section id="menu">
         <div class="section-header" data-en="Menu">
-            <h2 class="section-title">お品書き</h2>
+            <h2 class="section-title">ãåæ¸ã</h2>
             <p class="section-subtitle">EXQUISITE TASTE</p>
         </div>
         
         <div class="menu-filters">
-            <button class="filter-btn active" data-category="all">全て</button>
-            <button class="filter-btn" data-category="tonchyan">名物</button>
-            <button class="filter-btn" data-category="hormone">ホルモン</button>
-            <button class="filter-btn" data-category="meat">赤身</button>
-            <button class="filter-btn" data-category="ramen">〆の一杯</button>
+            <button class="filter-btn active" data-category="all">å¨ã¦</button>
+            <button class="filter-btn" data-category="tonchyan">åç©</button>
+            <button class="filter-btn" data-category="hormone">ãã«ã¢ã³</button>
+            <button class="filter-btn" data-category="meat">èµ¤èº«</button>
+            <button class="filter-btn" data-category="ramen">ãã®ä¸æ¯</button>
         </div>
 
         <div class="menu-grid" id="menuGrid">
-            <!-- 名物 -->
+            <!-- åç© -->
             <div class="menu-item" data-category="tonchyan">
-                <span class="menu-badge badge-special">名物</span>
-                <h3><span>味噌とんちゃん</span> <span class="price">¥250</span></h3>
-                <p class="description">秘伝の自家製味噌ダレを絡めた看板メニュー</p>
+                <span class="menu-badge badge-special">åç©</span>
+                <h3><span>å³åã¨ãã¡ãã</span> <span class="price">Â¥250</span></h3>
+                <p class="description">ç§ä¼ã®èªå®¶è£½å³åãã¬ãçµ¡ããçæ¿ã¡ãã¥ã¼</p>
             </div>
             <div class="menu-item" data-category="tonchyan">
-                <span class="menu-badge badge-special">人気</span>
-                <h3><span>塩とんちゃん</span> <span class="price">¥250</span></h3>
-                <p class="description">素材の旨味が際立つ、至高の塩加減</p>
+                <span class="menu-badge badge-special">äººæ°</span>
+                <h3><span>å¡©ã¨ãã¡ãã</span> <span class="price">Â¥250</span></h3>
+                <p class="description">ç´ æã®æ¨å³ãéç«ã¤ãè³é«ã®å¡©å æ¸</p>
             </div>
 
-            <!-- ホルモン -->
+            <!-- ãã«ã¢ã³ -->
             <div class="menu-item" data-category="hormone">
-                <span class="menu-badge badge-recommend">おすすめ</span>
-                <h3><span>心臓（ハツ）</span> <span class="price">¥350</span></h3>
-                <p class="description">新鮮だからこそのプリプリとした弾力</p>
+                <span class="menu-badge badge-recommend">ãããã</span>
+                <h3><span>å¿èï¼ããï¼</span> <span class="price">Â¥350</span></h3>
+                <p class="description">æ°é®®ã ããããã®ããªããªã¨ããå¼¾å</p>
             </div>
             <div class="menu-item" data-category="hormone">
-                <h3><span>肝臓（レバー）</span> <span class="price">¥350</span></h3>
-                <p class="description">臭みの一切ない、甘みのある極上レバー</p>
+                <h3><span>èèï¼ã¬ãã¼ï¼</span> <span class="price">Â¥350</span></h3>
+                <p class="description">è­ã¿ã®ä¸åãªããçã¿ã®ããæ¥µä¸ã¬ãã¼</p>
             </div>
             <div class="menu-item" data-category="hormone">
-                <span class="menu-badge badge-rare">希少</span>
-                <h3><span>子袋</span> <span class="price">¥450</span></h3>
-                <p class="description">極太で透き通るピンク色。希少な極上部位</p>
+                <span class="menu-badge badge-rare">å¸å°</span>
+                <h3><span>å­è¢</span> <span class="price">Â¥450</span></h3>
+                <p class="description">æ¥µå¤ªã§éãéããã³ã¯è²ãå¸å°ãªæ¥µä¸é¨ä½</p>
             </div>
 
-            <!-- 赤身 -->
+            <!-- èµ¤èº« -->
             <div class="menu-item" data-category="meat">
-                <h3><span>サガリ</span> <span class="price">¥450</span></h3>
-                <p class="description">柔らかく、肉の旨味が濃厚な部位</p>
+                <h3><span>ãµã¬ãª</span> <span class="price">Â¥450</span></h3>
+                <p class="description">æããããèã®æ¨å³ãæ¿åãªé¨ä½</p>
             </div>
             <div class="menu-item" data-category="meat">
-                <span class="menu-badge badge-recommend">数量限定</span>
-                <h3><span>上ハラミ</span> <span class="price">¥1,000</span></h3>
-                <p class="description">上質な脂と赤身のバランス。売り切れ御免</p>
+                <span class="menu-badge badge-recommend">æ°ééå®</span>
+                <h3><span>ä¸ãã©ã</span> <span class="price">Â¥1,000</span></h3>
+                <p class="description">ä¸è³ªãªèã¨èµ¤èº«ã®ãã©ã³ã¹ãå£²ãåãå¾¡å</p>
             </div>
 
-            <!-- ラーメン -->
+            <!-- ã©ã¼ã¡ã³ -->
             <div class="menu-item" data-category="ramen">
-                <span class="menu-badge badge-special">復刻</span>
-                <h3><span>屋台しょうゆ</span> <span class="price">¥600</span></h3>
-                <p class="description">一宮屋台直伝。心に染みる懐かしい味</p>
+                <span class="menu-badge badge-special">å¾©å»</span>
+                <h3><span>å±å°ãããã</span> <span class="price">Â¥600</span></h3>
+                <p class="description">ä¸å®®å±å°ç´ä¼ãå¿ã«æã¿ãæãããå³</p>
             </div>
             <div class="menu-item" data-category="ramen">
-                <h3><span>チャーシューメン</span> <span class="price">¥750</span></h3>
-                <p class="description">とろける自家製チャーシューを贅沢に</p>
+                <h3><span>ãã£ã¼ã·ã¥ã¼ã¡ã³</span> <span class="price">Â¥750</span></h3>
+                <p class="description">ã¨ãããèªå®¶è£½ãã£ã¼ã·ã¥ã¼ãè´æ²¢ã«</p>
             </div>
         </div>
     </section>
 
-    <!-- 店舗情報 -->
+    <!-- åºèæå ± -->
     <section id="info">
         <div class="section-header" data-en="Access">
-            <h2 class="section-title">店舗情報</h2>
+            <h2 class="section-title">åºèæå ±</h2>
             <p class="section-subtitle">INFORMATION</p>
         </div>
         
         <div class="info-container">
             <div class="info-card">
-                <h3>基本情報</h3>
+                <h3>åºæ¬æå ±</h3>
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <span class="label">ADDRESS</span>
-                        <div class="value">名古屋市北区瑠璃光町1-2-1<br>サントピア若葉 1-D</div>
+                        <div class="value">åå¤å±å¸ååºç çåçº1-2-1<br>ãµã³ããã¢è¥è 1-D</div>
                     </div>
                 </div>
                 <div class="info-item">
@@ -1063,95 +1068,95 @@
                     <i class="fas fa-subway"></i>
                     <div>
                         <span class="label">ACCESS</span>
-                        <div class="value">地下鉄名城線「志賀本通駅」<br>4番出口より徒歩2分</div>
+                        <div class="value">å°ä¸éååç·ãå¿è³æ¬éé§ã<br>4çªåºå£ããå¾æ­©2å</div>
                     </div>
                 </div>
             </div>
 
             <div class="info-card">
-                <h3>営業時間</h3>
+                <h3>å¶æ¥­æé</h3>
                 <div class="info-item">
                     <i class="far fa-clock"></i>
                     <div>
                         <span class="label">OPEN</span>
-                        <div class="value">17:00 ～ 23:00<br><span style="font-size: 0.8rem; color: #888;">(L.O. 22:00)</span></div>
+                        <div class="value">17:00 ï½ 23:00<br><span style="font-size: 0.8rem; color: #888;">(L.O. 22:00)</span></div>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="far fa-calendar-times"></i>
                     <div>
                         <span class="label">CLOSED</span>
-                        <div class="value">月曜日</div>
+                        <div class="value">æææ¥</div>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-chair"></i>
                     <div>
                         <span class="label">SEAT</span>
-                        <div class="value">カウンター 10席<br>テーブル 8席</div>
+                        <div class="value">ã«ã¦ã³ã¿ã¼ 10å¸­<br>ãã¼ãã« 8å¸­</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 予約モーダル -->
+    <!-- äºç´ã¢ã¼ãã« -->
     <div class="modal" id="reservationModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">
                 <i class="fas fa-times"></i>
             </button>
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--gold);">ご予約</h2>
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--gold);">ãäºç´</h2>
             <form id="reservationForm" onsubmit="handleReservation(event)">
                 <div class="form-group">
-                    <label>お名前</label>
-                    <input type="text" id="name" required placeholder="例：武屋 太郎">
+                    <label>ãåå</label>
+                    <input type="text" id="name" required placeholder="ä¾ï¼æ­¦å± å¤ªé">
                 </div>
 
                 <div class="form-group">
-                    <label>電話番号</label>
+                    <label>é»è©±çªå·</label>
                     <input type="tel" id="phone" required placeholder="090-0000-0000">
                 </div>
 
                 <div class="form-group">
-                    <label>ご希望日（月曜定休）</label>
+                    <label>ãå¸ææ¥ï¼ææå®ä¼ï¼</label>
                     <input type="date" id="date" required>
                 </div>
 
                 <div class="form-group">
-                    <label>時間帯</label>
+                    <label>æéå¸¯</label>
                     <div class="time-slots" id="timeSlots"></div>
                 </div>
 
                 <div class="form-group">
-                    <label>人数</label>
+                    <label>äººæ°</label>
                     <select id="guests" required>
-                        <option value="">選択してください</option>
-                        <option value="1">1名様</option>
-                        <option value="2">2名様</option>
-                        <option value="3">3名様</option>
-                        <option value="4">4名様</option>
-                        <option value="5">5名様</option>
-                        <option value="6">6名様以上（要電話）</option>
+                        <option value="">é¸æãã¦ãã ãã</option>
+                        <option value="1">1åæ§</option>
+                        <option value="2">2åæ§</option>
+                        <option value="3">3åæ§</option>
+                        <option value="4">4åæ§</option>
+                        <option value="5">5åæ§</option>
+                        <option value="6">6åæ§ä»¥ä¸ï¼è¦é»è©±ï¼</option>
                     </select>
                 </div>
 
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-                    予約を確定する
+                    äºç´ãç¢ºå®ãã
                 </button>
             </form>
         </div>
     </div>
 
-    <!-- トースト通知 -->
+    <!-- ãã¼ã¹ãéç¥ -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle"></i>
         <div id="toastMessage"></div>
     </div>
 
-    <!-- フッター -->
+    <!-- ããã¿ã¼ -->
     <footer>
-        <div class="footer-logo">武屋</div>
+        <div class="footer-logo">æ­¦å±</div>
         <div class="social-links">
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1163,7 +1168,7 @@
     </footer>
 
     <script>
-        // ナビゲーションスクロール
+        // ããã²ã¼ã·ã§ã³ã¹ã¯ã­ã¼ã«
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('nav');
             if (window.scrollY > 50) {
@@ -1173,7 +1178,7 @@
             }
         });
 
-        // モバイルメニュー
+        // ã¢ãã¤ã«ã¡ãã¥ã¼
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1184,7 +1189,7 @@
             icon.classList.toggle('fa-times');
         });
 
-        // 要素のフェードインアニメーション
+        // è¦ç´ ã®ãã§ã¼ãã¤ã³ã¢ãã¡ã¼ã·ã§ã³
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1197,7 +1202,7 @@
             observer.observe(el);
         });
 
-        // メニューフィルター機能
+        // ã¡ãã¥ã¼ãã£ã«ã¿ã¼æ©è½
         const filterButtons = document.querySelectorAll('.filter-btn');
         const menuItems = document.querySelectorAll('.menu-item');
 
@@ -1220,7 +1225,7 @@
             });
         });
 
-        // --- トースト通知機能 ---
+        // --- ãã¼ã¹ãéç¥æ©è½ ---
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastMsg = document.getElementById('toastMessage');
@@ -1231,7 +1236,7 @@
             }, 3000);
         }
 
-        // --- 予約システム関連 ---
+        // --- äºç´ã·ã¹ãã é¢é£ ---
         function openModal() {
             document.getElementById('reservationModal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -1252,8 +1257,8 @@
             
             dateInput.addEventListener('change', () => {
                 const selectedDate = new Date(dateInput.value);
-                if (selectedDate.getDay() === 1) { // 月曜定休
-                    showToast('月曜日は定休日となっております。');
+                if (selectedDate.getDay() === 1) { // ææå®ä¼
+                    showToast('æææ¥ã¯å®ä¼æ¥ã¨ãªã£ã¦ããã¾ãã');
                     dateInput.value = '';
                     return;
                 }
@@ -1265,27 +1270,27 @@
             const container = document.getElementById('timeSlots');
             container.innerHTML = '';
             
-            // 17:00 - 23:00 (30分間隔)
+            // 17:00 - 23:00 (30åéé)
             const startHour = 17;
-            const endHour = 22; // ラストオーダー付近まで
+            const endHour = 22; // ã©ã¹ããªã¼ãã¼ä»è¿ã¾ã§
             
             for (let h = startHour; h <= endHour; h++) {
                 ['00', '30'].forEach(m => {
-                    if (h === endHour && m === '30') return; // 22:30は除外など調整可
+                    if (h === endHour && m === '30') return; // 22:30ã¯é¤å¤ãªã©èª¿æ´å¯
                     
                     const slot = document.createElement('div');
                     slot.className = 'time-slot';
                     const timeString = `${h}:${m}`;
                     
-                    // ランダムな空席状況（デモ用）
+                    // ã©ã³ãã ãªç©ºå¸­ç¶æ³ï¼ãã¢ç¨ï¼
                     const rand = Math.random();
-                    let statusHtml = '<span class="availability" style="color:#4CAF50">◎</span>';
+                    let statusHtml = '<span class="availability" style="color:#4CAF50">â</span>';
                     
                     if (rand < 0.2) {
-                        statusHtml = '<span class="availability" style="color:#f44336">×</span>';
+                        statusHtml = '<span class="availability" style="color:#f44336">Ã</span>';
                         slot.classList.add('disabled');
                     } else if (rand < 0.5) {
-                        statusHtml = '<span class="availability" style="color:#ff9800">△</span>';
+                        statusHtml = '<span class="availability" style="color:#ff9800">â³</span>';
                     }
 
                     slot.innerHTML = `<div>${timeString}</div>${statusHtml}`;
@@ -1306,33 +1311,33 @@
             e.preventDefault();
             const selectedSlot = document.querySelector('.time-slot.selected');
             if (!selectedSlot) {
-                showToast('時間帯を選択してください。');
+                showToast('æéå¸¯ãé¸æãã¦ãã ããã');
                 return;
             }
             
-            // 送信処理シミュレーション
+            // éä¿¡å¦çã·ãã¥ã¬ã¼ã·ã§ã³
             const name = document.getElementById('name').value;
-            showToast(`${name}様、ご予約を承りました。`);
+            showToast(`${name}æ§ããäºç´ãæ¿ãã¾ããã`);
             closeModal();
             document.getElementById('reservationForm').reset();
         }
 
-        // モーダル背景クリックで閉じる
+        // ã¢ã¼ãã«èæ¯ã¯ãªãã¯ã§éãã
         document.getElementById('reservationModal').addEventListener('click', (e) => {
             if (e.target.id === 'reservationModal') closeModal();
         });
 
-        // スムーズスクロール
+        // ã¹ã ã¼ãºã¹ã¯ã­ã¼ã«
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const href = this.getAttribute('href');
-                if (!href || href === '#') return; // ここで無効なセレクタを弾く
+                if (!href || href === '#') return; // ããã§ç¡å¹ãªã»ã¬ã¯ã¿ãå¼¾ã
 
                 const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
-                    // SPメニューを閉じる
+                    // SPã¡ãã¥ã¼ãéãã
                     navLinks.classList.remove('active');
                 }
             });
