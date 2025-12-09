@@ -217,7 +217,7 @@
                         }
                     );
                     const data = await response.json();
-                    const htmlContent = atob(data.content);
+                    const htmlContent = decodeURIComponent(escape(atob(data.content)));
                     setEditHtml(htmlContent);
                     setEditingRestaurant({ ...restaurant, sha: data.sha });
                 } catch (error) {
