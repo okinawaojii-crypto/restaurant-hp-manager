@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="description" content="大阪・寝屋川（萱島）の「広東料理 民生」。神戸・南京町「民生」の暖簾分け。名物イカの天ぷら、酢豚、円卓での宴会。">
+  <meta property="og:title" content="広東料理 民生｜大阪・寝屋川（萱島）公式">
+  <meta property="og:description" content="神戸・南京町「民生」暖簾分け。名物イカの天ぷらと、ボリュームたっぷりの広東料理。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>広東料理 民生｜大阪・寝屋川（萱島）</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&display=swap');
+
+    :root{
+      --minsei-red:#8B2635;
+      --minsei-red-deep:#6B1D29;
+      --minsei-gold:#C9A961;
+      --minsei-gold-light:#E8D5A3;
+      --minsei-ink:#1A1A1A;
+      --minsei-paper:#FAF6F0;
+      --minsei-paper-dark:#F0E8DC;
+      --minsei-line:#D4C9B8;
+
+      --shadow-sm:0 2px 10px rgba(26,26,26,.07);
+      --shadow-md:0 10px 28px rgba(26,26,26,.10);
+
+      --radius:14px;
+      --radius-lg:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Noto Sans JP',sans-serif;
+      color:var(--minsei-ink);
+      background:var(--minsei-paper);
+      line-height:1.9;
+      letter-spacing:.02em;
+      -webkit-font-smoothing:antialiased;
+      padding-bottom:84px;
+      font-size:clamp(16px, 1.2vw + 12px, 19px);
+    }
+    .serif{font-family:'Noto Serif JP',serif}
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      background:var(--minsei-paper);
+    }
+
+    .skip{
+      position:absolute;left:-9999px;top:auto;
+    }
+    .skip:focus{
+      left:12px;top:12px;z-index:9999;
+      background:#fff;border:2px solid var(--minsei-red);
+      padding:10px 12px;border-radius:10px;
+      font-weight:900;
+    }
+
+    .promise-bar{
+      background:linear-gradient(135deg,var(--minsei-ink),#2a2a2a);
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+    .promise-item{
+      text-align:center;
+      padding:12px 10px;
+      border-right:1px solid rgba(255,255,255,.12);
+    }
+    .promise-item:last-child{border-right:none}
+    .promise-item .icon{
+      color:var(--minsei-gold);
+      font-size:.95rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      margin-bottom:4px;
+    }
+    .promise-item .text{
+      color:#fff;
+      font-weight:900;
+      font-size:1.05rem;
+      line-height:1.3;
+    }
+
+    .fv-header{
+      padding:26px 18px 18px;
+      text-align:center;
+      background:linear-gradient(180deg,var(--minsei-paper),var(--minsei-paper-dark));
+      border-bottom:4px solid var(--minsei-red);
+      position:relative;
+    }
+    .fv-header::after{
+      content:"";
+      position:absolute;bottom:-7px;left:50%;transform:translateX(-50%);
+      width:120px;height:3px;background:var(--minsei-gold);
+    }
+    .fv-store-name{
+      font-size:clamp(30px, 2.2vw + 18px, 44px);
+      font-weight:900;
+      letter-spacing:.18em;
+      margin-bottom:10px;
+    }
+    .fv-origin{
+      display:inline-block;
+      padding:8px 14px;
+      background:var(--minsei-red);
+      color:#fff;
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.10em;
+      margin-bottom:12px;
+      border-radius:6px;
+    }
+    .fv-location{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      color:#222;
+      opacity:.9;
+    }
+    .fv-location svg{width:18px;height:18px;color:var(--minsei-red)}
+
+    .fv-gaikan{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      background:#111;
+      overflow:hidden;
+    }
+    .fv-gaikan img{
+      width:100%;height:100%;
+      object-fit:cover;
+      object-position:center;
+      transform:scale(1.02);
+    }
+    .fv-gaikan-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 45%, rgba(0,0,0,.78) 100%);
+    }
+    .fv-gaikan-content{
+      position:absolute;left:0;right:0;bottom:0;
+      padding:18px 18px 16px;
+      color:#fff;
+    }
+    .fv-gaikan-badge{
+      display:inline-flex;align-items:center;gap:10px;
+      background:rgba(255,255,255,.96);
+      color:#111;
+      padding:10px 14px;
+      border-radius:10px;
+      box-shadow:var(--shadow-sm);
+      margin-bottom:10px;
+      font-weight:900;
+    }
+    .fv-gaikan-badge .dot{
+      width:12px;height:12px;border-radius:999px;
+      background:#F4D03F;
+      box-shadow:0 0 10px rgba(244,208,63,.75);
+    }
+    .fv-gaikan-sub{
+      font-size:1rem;
+      font-weight:700;
+      opacity:.92;
+    }
+
+    .fv-signature{
+      display:grid;
+      grid-template-columns:1fr;
+      background:var(--minsei-ink);
+    }
+    @media (min-width:900px){
+      .fv-signature{grid-template-columns:1.1fr .9fr;}
+    }
+    .fv-signature-photo{aspect-ratio:4/3;overflow:hidden}
+    .fv-signature-photo img{width:100%;height:100%;object-fit:cover}
+    .fv-signature-text{
+      padding:18px 18px 20px;
+      background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));
+      color:#fff;
+      display:flex;flex-direction:column;justify-content:center;
+    }
+    .fv-signature-label{
+      color:var(--minsei-gold);
+      font-weight:900;
+      letter-spacing:.22em;
+      font-size:1rem;
+      margin-bottom:12px;
+      text-shadow:0 1px 3px rgba(0,0,0,.3);
+    }
+    .fv-signature-name{
+      font-size:clamp(22px, 1.3vw + 18px, 30px);
+      font-weight:900;
+      letter-spacing:.10em;
+      margin-bottom:10px;
+    }
+    .fv-signature-desc{
+      font-size:1rem;
+      opacity:.96;
+    }
+    .fv-signature-note{
+      margin-top:12px;
+      display:inline-block;
+      background:rgba(0,0,0,.22);
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:900;
+      font-size:1.1rem;
+      width:max-content;
+    }
+
+    .fv-cta{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      background:var(--minsei-ink);
+    }
+    .fv-cta-btn{
+      padding:14px 10px;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:6px;
+      text-decoration:none;
+      font-weight:900;
+      color:#fff;
+      border-right:1px solid rgba(255,255,255,.12);
+      font-size:.92rem;
+    }
+    .fv-cta-btn:last-child{border-right:none}
+    .fv-cta-btn svg{width:22px;height:22px}
+    .fv-cta-btn--primary{background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep))}
+    .fv-cta-btn--gold{background:linear-gradient(135deg,var(--minsei-gold),#A88B3D);color:#111}
+
+    .section{padding:42px 18px}
+    .section--alt{background:var(--minsei-paper-dark)}
+    .section-header{text-align:center;margin-bottom:22px}
+    .section-header-en{
+      color:var(--minsei-gold);
+      letter-spacing:.28em;
+      font-weight:900;
+      font-size:.72rem;
+      margin-bottom:6px;
+    }
+    .section-header-jp{
+      font-size:clamp(22px, 1.4vw + 16px, 30px);
+      font-weight:900;
+      letter-spacing:.12em;
+    }
+    .section-header::after{
+      content:"";
+      display:block;
+      width:54px;height:2px;background:var(--minsei-gold);
+      margin:14px auto 0;
+    }
+
+    .recommend-section{
+      padding:44px 18px;
+      background:linear-gradient(180deg,var(--minsei-paper-dark),var(--minsei-paper));
+    }
+    .stamp{
+      display:inline-flex;align-items:center;
+      padding:8px 12px;
+      background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));
+      color:#fff;
+      font-weight:900;
+      letter-spacing:.10em;
+      border-radius:10px;
+      font-size:.78rem;
+      margin-bottom:10px;
+      box-shadow:0 2px 10px rgba(139,38,53,.22);
+    }
+    .recommend-title{
+      font-size:clamp(24px, 1.6vw + 18px, 34px);
+      font-weight:900;
+      letter-spacing:.12em;
+      margin-bottom:10px;
+    }
+    .recommend-lead{color:#555;font-weight:700}
+    .recommend-list{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+    .recommend-item{
+      display:grid;
+      grid-template-columns:56px 1fr;
+      gap:14px;
+      padding:16px;
+      background:#fff;
+      border:1px solid var(--minsei-line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+    }
+    .recommend-rank-num{
+      font-family:'Noto Serif JP',serif;
+      font-size:2.5rem;
+      font-weight:900;
+      color:var(--minsei-gold);
+      line-height:1;
+      text-align:center;
+    }
+    .recommend-rank-num.top3{color:var(--minsei-red)}
+    .recommend-rank-label{text-align:center;font-size:.9rem;color:#999;font-weight:900;letter-spacing:.1em}
+    .recommend-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+    .chip{
+      font-size:.88rem;
+      font-weight:900;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--minsei-paper-dark);
+    }
+    .chip--hot{background:var(--minsei-red);color:#fff}
+    .recommend-name{font-weight:900;font-size:1.12rem;margin-bottom:4px}
+    .recommend-desc{color:#444;font-size:1rem}
+    .recommend-tip{margin-top:8px;color:#8b6a1f;font-weight:900;font-size:1rem}
+    
+    .recommend-item--featured .recommend-name{font-size:1.9rem;margin-bottom:10px}
+    .recommend-item--featured .recommend-desc{font-size:1.3rem;line-height:1.7}
+    .recommend-item--featured .recommend-tip{font-size:1.2rem;margin-top:12px}
+
+    .recommend-item--featured{
+      grid-template-columns:1fr;
+      background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));
+      color:#fff;border:none;
+      padding:14px 16px;
+    }
+    .recommend-item--featured .recommend-rank{
+      margin:6px 0 8px;
+    }
+    .recommend-item--featured .recommend-rank-num{color:var(--minsei-gold-light)}
+    .recommend-item--featured .recommend-desc{color:rgba(255,255,255,.92)}
+    .recommend-item--featured .chip{background:rgba(255,255,255,.18);color:#fff}
+    .recommend-item--featured .chip--hot{background:var(--minsei-gold);color:#111}
+
+    .sticky-nav{
+      position:sticky;top:0;z-index:80;
+      background:rgba(250,246,240,.96);
+      backdrop-filter:blur(10px);
+      border-top:4px solid var(--minsei-red);
+      border-bottom:1px solid var(--minsei-line);
+    }
+    .nav-list{display:flex;justify-content:center;list-style:none}
+    .nav-item a{
+      display:block;
+      padding:14px 16px;
+      text-decoration:none;
+      color:#111;
+      font-weight:900;
+      letter-spacing:.08em;
+      border-bottom:3px solid transparent;
+      font-size:.95rem;
+    }
+    .nav-item a:hover{color:var(--minsei-red);border-bottom-color:var(--minsei-red)}
+
+    .guide-interior{
+      aspect-ratio:16/9;border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow-md);
+      margin-bottom:22px;background:#111;position:relative;
+    }
+    .guide-interior img{width:100%;height:100%;object-fit:cover}
+    .guide-interior-caption{
+      position:absolute;left:0;right:0;bottom:0;
+      padding:28px 12px 12px;
+      background:linear-gradient(transparent,rgba(0,0,0,.72));
+      color:#fff;font-weight:900;text-align:center;
+    }
+    .card{
+      background:#fff;border:1px solid var(--minsei-line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+      padding:18px;
+    }
+    .card h3{
+      display:flex;gap:10px;align-items:center;
+      font-weight:900;font-size:1.05rem;margin-bottom:12px;
+    }
+    .card h3 svg{width:20px;height:20px;color:var(--minsei-gold)}
+    .volume-table{width:100%;border-collapse:collapse}
+    .volume-table th,.volume-table td{
+      padding:12px 10px;border-bottom:1px solid var(--minsei-line);
+      text-align:left;
+    }
+    .volume-table th{width:6rem;background:var(--minsei-paper);font-weight:900}
+    .card-note{text-align:right;color:#666;font-weight:700;margin-top:8px}
+
+    .shikomi-block{
+      margin-top:22px;
+      background:#fff;
+      border:1px solid var(--minsei-line);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-md);
+      padding:18px;
+    }
+    .shikomi-label{
+      display:inline-flex;align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));
+      color:#fff;
+      font-weight:900;
+      letter-spacing:.08em;
+      border-radius:10px;
+      margin-bottom:12px;
+      font-size:.8rem;
+    }
+    .shikomi-title{
+      font-size:clamp(20px, 1.2vw + 16px, 28px);
+      font-weight:900;
+      letter-spacing:.10em;
+      margin-bottom:8px;
+    }
+    .shikomi-lead{color:#444;font-weight:700;margin-bottom:14px}
+    .shikomi-media{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    @media (min-width:900px){
+      .shikomi-media{grid-template-columns:1.4fr 1fr;}
+    }
+    figure{
+      margin:0;position:relative;overflow:hidden;
+      border-radius:var(--radius);
+      border:1px solid var(--minsei-line);
+      box-shadow:var(--shadow-sm);
+      background:#111;
+    }
+    figure.main{aspect-ratio:16/10}
+    figure.sub{aspect-ratio:1/1}
+    figure img{width:100%;height:100%;object-fit:cover;display:block}
+    .tag{
+      position:absolute;top:10px;left:10px;
+      padding:6px 10px;border-radius:999px;
+      font-size:.75rem;font-weight:900;letter-spacing:.08em;
+      background:rgba(0,0,0,.65);color:#fff;
+      backdrop-filter:blur(6px);
+    }
+    figure.main .tag{background:linear-gradient(135deg,var(--minsei-gold),#A88B3D);color:#111}
+    figcaption{
+      position:absolute;left:0;right:0;bottom:0;
+      padding:22px 10px 10px;
+      background:linear-gradient(transparent,rgba(0,0,0,.72));
+      color:#fff;font-weight:900;text-align:center;
+      font-size:.92rem;
+    }
+    .shikomi-caption{
+      margin-top:14px;
+      border-top:1px solid var(--minsei-line);
+      padding-top:12px;
+      text-align:center;
+      color:#444;
+      font-weight:700;
+    }
+
+    .menu-insta-link{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 12px;
+      background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));
+      color:#fff;text-decoration:none;
+      border-radius:var(--radius);
+      font-weight:900;
+      box-shadow:var(--shadow-sm);
+      margin-bottom:16px;
+    }
+    .menu-insta-link svg{width:18px;height:18px}
+
+    .menu-tabs{
+      display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;
+    }
+    .menu-tab{
+      flex:1 1 calc(33.333% - 10px);
+      min-height:52px;
+      background:#fff;
+      border:2px solid var(--minsei-line);
+      border-radius:12px;
+      font-weight:900;
+      cursor:pointer;
+      padding:10px 10px;
+      font-size:.95rem;
+    }
+    .menu-tab:hover{border-color:var(--minsei-gold)}
+    .menu-tab.active{background:var(--minsei-red);border-color:var(--minsei-red);color:#fff}
+
+    .menu-panel{display:none}
+    .menu-panel.active{display:block}
+
+    .menu-list{
+      list-style:none;
+      background:#fff;
+      border:1px solid var(--minsei-line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow-sm);
+    }
+    .menu-item{
+      display:flex;justify-content:space-between;gap:14px;
+      padding:14px 14px;
+      border-bottom:1px solid var(--minsei-line);
+      align-items:flex-start;
+    }
+    .menu-item:last-child{border-bottom:none}
+    .menu-item-name{font-weight:900}
+    .menu-item-note{color:#666;font-weight:700;font-size:.92rem;margin-top:2px}
+    .menu-item-price{
+      font-family:'Noto Serif JP',serif;
+      font-weight:900;
+      color:var(--minsei-red);
+      white-space:nowrap;
+      font-size:1.05rem;
+    }
+    .menu-notice{
+      margin-top:14px;
+      text-align:center;
+      color:#666;
+      font-weight:700;
+      font-size:.92rem;
+    }
+
+    .access-info{
+      background:#fff;border:1px solid var(--minsei-line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+      padding:18px;
+    }
+    .info-dl{
+      display:grid;
+      grid-template-columns:7rem 1fr;
+      gap:0 14px;
+    }
+    .info-dl dt,.info-dl dd{
+      padding:12px 0;border-bottom:1px solid var(--minsei-line);
+    }
+    .info-dl dt{color:var(--minsei-gold);font-weight:900}
+    .info-dl dd{margin:0;font-weight:700}
+    .info-dl dt:last-of-type,.info-dl dd:last-of-type{border-bottom:none}
+
+    .fixed-footer{
+      position:fixed;left:0;right:0;bottom:0;z-index:200;
+      background:var(--minsei-ink);
+      padding:12px;
+    }
+    .footer-container{
+      max-width:980px;margin:0 auto;
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:8px;
+    }
+    .f-btn{
+      height:54px;
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.04em;
+      box-shadow:var(--shadow-sm);
+    }
+    .f-btn svg{width:18px;height:18px}
+    .btn-insta{background:linear-gradient(135deg,var(--minsei-red),var(--minsei-red-deep));color:#fff}
+    .btn-info{background:var(--minsei-paper);color:var(--minsei-ink);border:2px solid var(--minsei-gold)}
+    .btn-map{background:linear-gradient(135deg,var(--minsei-gold),#A88B3D);color:#111}
+    .btn-tel{background:#fff;color:#111}
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#recommend">おすすめ10品へスキップ</a>
+
+  <div class="container">
+
+    <div class="promise-bar">
+      <div class="promise-item"><div class="icon">量</div><div class="text">小でも<br>2〜3人前</div></div>
+      <div class="promise-item"><div class="icon">支払</div><div class="text">現金のみ</div></div>
+      <div class="promise-item"><div class="icon">駐車</div><div class="text">4台あり</div></div>
+      <div class="promise-item"><div class="icon">営業</div><div class="text">Instaで<br>確認</div></div>
+    </div>
+
+    <header class="fv-header">
+      <h1 class="fv-store-name serif">広東料理 民生</h1>
+      <p class="fv-origin">神戸・南京町「民生」暖簾分け</p>
+      <p class="fv-location"><i data-lucide="map-pin"></i>萱島駅 徒歩7分（寝屋川市）</p>
+    </header>
+
+    <div class="fv-gaikan">
+      <img src="image/gaikan.jpg" alt="広東料理 民生 外観（黄色い看板が目印）">
+      <div class="fv-gaikan-overlay"></div>
+      <div class="fv-gaikan-content">
+        <div class="fv-gaikan-badge"><span class="dot"></span><span>黄色い看板が目印</span></div>
+        <p class="fv-gaikan-sub">地元で長く愛される、家族で入れる町の広東料理店。</p>
+      </div>
+    </div>
+
+    <div class="fv-signature">
+      <div class="fv-signature-photo">
+        <img src="image/ikaten.jpg" alt="名物 イカの天ぷら">
+      </div>
+      <div class="fv-signature-text">
+        <p class="fv-signature-label">— 創業からの名物 —</p>
+        <h2 class="fv-signature-name serif">イカの天ぷら</h2>
+        <p class="fv-signature-desc">
+          外はサクッ、中は肉厚。<br>
+          注文が入ってから揚げる、<br>
+          変わらない一皿。
+        </p>
+        <span class="fv-signature-note">小でも2〜3人前</span>
+      </div>
+    </div>
+
+    <div class="fv-cta">
+      <a class="fv-cta-btn fv-cta-btn--primary" href="https://www.instagram.com/minsei_kayashima/" target="_blank" rel="noopener">
+        <i data-lucide="instagram"></i><span>営業確認</span>
+      </a>
+      <a class="fv-cta-btn fv-cta-btn--gold" href="https://www.google.com/maps/search/?api=1&query=%E5%AF%9D%E5%B1%8B%E5%B7%9D%E5%B8%82%E8%90%B1%E5%B3%B6%E4%BF%A1%E5%92%8C%E7%94%BA4-3" target="_blank" rel="noopener">
+        <i data-lucide="map-pin"></i><span>地図を見る</span>
+      </a>
+      <a class="fv-cta-btn" href="tel:0728229402">
+        <i data-lucide="phone"></i><span>電話する</span>
+      </a>
+    </div>
+
+    <section id="recommend" class="recommend-section">
+      <div style="text-align:center">
+        <span class="stamp">初めての方へ</span>
+        <h2 class="recommend-title serif">迷ったらこの10品</h2>
+        <p class="recommend-lead">常連が「まず頼む」外さない定番を厳選しました。</p>
+      </div>
+
+      <div class="recommend-list">
+        <div class="recommend-item recommend-item--featured">
+          <div class="recommend-meta">
+            <span class="chip">揚物</span><span class="chip chip--hot">名物</span>
+          </div>
+          <div class="recommend-rank">
+            <div class="recommend-rank-num">1</div>
+            <div class="recommend-rank-label">BEST</div>
+          </div>
+          <h3 class="recommend-name">イカの天ぷら</h3>
+          <p class="recommend-desc">肉厚のイカを、注文が入ってからカラッと。外はサクサク、中はプリッ。民生の看板料理。</p>
+          <div class="recommend-tip">小サイズでも2〜3人前。まずはこれから</div>
+        </div>
+
+        <div class="recommend-item">
+          <div>
+            <div class="recommend-rank-num top3">2</div><div class="recommend-rank-label">RANK</div>
+          </div>
+          <div>
+            <div class="recommend-meta"><span class="chip">肉</span><span class="chip chip--hot">人気</span></div>
+            <div class="recommend-name">酢豚（古老肉）</div>
+            <div class="recommend-desc">甘酢あんが絡む、王道の一皿。初めてでも外さない定番。</div>
+            <div class="recommend-tip">2人以上ならシェアが楽しい</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div>
+            <div class="recommend-rank-num top3">3</div><div class="recommend-rank-label">RANK</div>
+          </div>
+          <div>
+            <div class="recommend-meta"><span class="chip">海鮮</span></div>
+            <div class="recommend-name">エビチリ</div>
+            <div class="recommend-desc">ピリ辛で食欲が進む。プリッとしたエビに、白ご飯がすすむ。</div>
+            <div class="recommend-tip">辛いのが苦手ならエビマヨへ</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">4</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">海鮮</span></div>
+            <div class="recommend-name">エビマヨ</div>
+            <div class="recommend-desc">まろやかなマヨソース。お子様や辛いのが苦手な方にも。</div>
+            <div class="recommend-tip">迷ったらエビチリと食べ比べも◎</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">5</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">豆腐</span></div>
+            <div class="recommend-name">麻婆豆腐</div>
+            <div class="recommend-desc">辛さ控えめで食べやすい。ご飯にかけても、単品でも。</div>
+            <div class="recommend-tip">白ご飯セットで頼む人多数</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">6</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">野菜</span></div>
+            <div class="recommend-name">八宝菜</div>
+            <div class="recommend-desc">野菜たっぷりで安心感。家族でシェアしやすい一皿。</div>
+            <div class="recommend-tip">野菜不足を感じたらこれ</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">7</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">肉</span></div>
+            <div class="recommend-name">青椒肉絲</div>
+            <div class="recommend-desc">香りと食感が良い炒め物。ビールにも相性◎。</div>
+            <div class="recommend-tip">大人の定番</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">8</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">飯</span><span class="chip chip--hot">人気</span></div>
+            <div class="recommend-name">五目炒飯</div>
+            <div class="recommend-desc">シメの定番。パラッと系で最後まで食べ飽きない。</div>
+            <div class="recommend-tip">量が多いので2人でシェアも</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">9</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">飯</span></div>
+            <div class="recommend-name">天津飯</div>
+            <div class="recommend-desc">ふわとろ卵に、やさしいあん。胃にやさしく満足感。</div>
+            <div class="recommend-tip">一人ランチにもぴったり</div>
+          </div>
+        </div>
+
+        <div class="recommend-item">
+          <div><div class="recommend-rank-num">10</div><div class="recommend-rank-label">RANK</div></div>
+          <div>
+            <div class="recommend-meta"><span class="chip">麺</span></div>
+            <div class="recommend-name">ワンタン麺</div>
+            <div class="recommend-desc">やさしいスープとつるっとした麺。軽めに〆たい日に。</div>
+            <div class="recommend-tip">スープまで飲み干せる</div>
+          </div>
+        </div>
+    </div>
+
+      <p class="menu-notice">※価格は変更になる場合があります。最新は店内メニューをご確認ください。</p>
+    </section>
+
+    <nav class="sticky-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#guide">初めての方</a></li>
+        <li class="nav-item"><a href="#menu">お品書き</a></li>
+        <li class="nav-item"><a href="#access">店舗情報</a></li>
+      </ul>
+    </nav>
+
+    <section id="guide" class="section">
+      <div class="guide-interior">
+        <img src="image/entaku.jpg" alt="円卓のある店内">
+        <p class="guide-interior-caption">円卓を囲んでゆったり。お子様連れも歓迎</p>
+      </div>
+
+      <div class="section-header">
+        <p class="section-header-en serif">GUIDE</p>
+        <h2 class="section-header-jp serif">初めての方へ</h2>
+      </div>
+
+      <div class="card">
+        <h3><i data-lucide="users"></i> 頼み方の目安</h3>
+            <table class="volume-table">
+              <tr><th>2名様</th><td>料理2品（小）＋ シメ1品</td></tr>
+              <tr><th>4名様</th><td>料理3品（小）＋ 炒飯・スープ</td></tr>
+            </table>
+        <p class="card-note">※お持ち帰りパックあります</p>
+          </div>
+
+      <div class="shikomi-block">
+        <div class="shikomi-label">名物は仕込みから</div>
+        <h3 class="shikomi-title serif">イカは、切り方から。</h3>
+        <p class="shikomi-lead">毎朝の下ごしらえが、あの「サクッ、ぷりっ」を作ります。</p>
+
+        <div class="shikomi-media">
+          <figure class="main">
+            <span class="tag">MAIN</span>
+            <img src="image/imageika_shikomi_main.jpg.jpg" alt="イカの仕込み作業：包丁とボウルを使った下ごしらえの様子">
+            <figcaption>毎朝、同じ手順で</figcaption>
+          </figure>
+
+          <figure class="sub">
+            <span class="tag">DETAIL</span>
+            <img src="image/imageika_shikomi_detail.jpg.jpg" alt="イカの断面：均一な厚みに切られたイカの質感">
+            <figcaption>同じ厚みに</figcaption>
+          </figure>
+        </div>
+
+        <p class="shikomi-caption">派手さより、同じ手順を丁寧に。今日も変わらず仕込んでいます。</p>
+      </div>
+    </section>
+
+    <section id="menu" class="section section--alt">
+      <div class="section-header">
+        <p class="section-header-en serif">MENU</p>
+        <h2 class="section-header-jp serif">お品書き</h2>
+      </div>
+
+      <a href="https://www.instagram.com/minsei_kayashima/" target="_blank" rel="noopener" class="menu-insta-link">
+        <i data-lucide="instagram"></i>
+        <span>売切れ・臨時休業はInstagramで確認</span>
+      </a>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" data-tab="lunch" role="tab">ランチ</button>
+        <button class="menu-tab" data-tab="cold" role="tab">冷菜</button>
+        <button class="menu-tab" data-tab="soup" role="tab">スープ</button>
+        <button class="menu-tab" data-tab="fried" role="tab">揚物</button>
+        <button class="menu-tab" data-tab="seafood" role="tab">海鮮</button>
+        <button class="menu-tab" data-tab="meat" role="tab">肉</button>
+        <button class="menu-tab" data-tab="veg" role="tab">野菜/豆腐</button>
+        <button class="menu-tab" data-tab="rice" role="tab">飯</button>
+        <button class="menu-tab" data-tab="noodle" role="tab">麺</button>
+        <button class="menu-tab" data-tab="dessert" role="tab">点心/デザート</button>
+        <button class="menu-tab" data-tab="drink" role="tab">ドリンク</button>
+        <button class="menu-tab" data-tab="special" role="tab">おすすめ</button>
+        </div>
+
+      <div class="menu-contents">
+        <div class="menu-panel active" id="panel-lunch"><ul class="menu-list" id="list-lunch"></ul></div>
+        <div class="menu-panel" id="panel-cold"><ul class="menu-list" id="list-cold"></ul></div>
+        <div class="menu-panel" id="panel-soup"><ul class="menu-list" id="list-soup"></ul></div>
+        <div class="menu-panel" id="panel-fried"><ul class="menu-list" id="list-fried"></ul></div>
+        <div class="menu-panel" id="panel-seafood"><ul class="menu-list" id="list-seafood"></ul></div>
+        <div class="menu-panel" id="panel-meat"><ul class="menu-list" id="list-meat"></ul></div>
+        <div class="menu-panel" id="panel-veg"><ul class="menu-list" id="list-veg"></ul></div>
+        <div class="menu-panel" id="panel-rice"><ul class="menu-list" id="list-rice"></ul></div>
+        <div class="menu-panel" id="panel-noodle"><ul class="menu-list" id="list-noodle"></ul></div>
+        <div class="menu-panel" id="panel-dessert"><ul class="menu-list" id="list-dessert"></ul></div>
+        <div class="menu-panel" id="panel-drink"><ul class="menu-list" id="list-drink"></ul></div>
+        <div class="menu-panel" id="panel-special"><ul class="menu-list" id="list-special"></ul></div>
+      </div>
+      
+      <p class="menu-notice">※価格は変更になる場合があります。最新は店内メニューをご確認ください。</p>
+    </section>
+
+    <section id="access" class="section">
+      <div class="section-header">
+        <p class="section-header-en serif">ACCESS</p>
+        <h2 class="section-header-jp serif">店舗情報</h2>
+      </div>
+
+      <div class="access-info">
+        <dl class="info-dl">
+          <dt>住所</dt>
+          <dd>〒572-0856<br>大阪府寝屋川市萱島信和町4-3<br><span style="color:#666;font-weight:700">京阪本線「萱島駅」東口より徒歩7分</span></dd>
+          
+          <dt>営業時間</dt>
+          <dd>昼 11:30 - 14:30 (L.O. 14:00)<br>夜 17:00 - 21:00 (L.O. 20:30)</dd>
+          
+          <dt>定休日</dt>
+          <dd>月曜日（祝日の場合は火曜振替）</dd>
+          
+          <dt>駐車場</dt>
+          <dd>4台（店舗横マンション 19〜22番）</dd>
+          
+          <dt>お支払い</dt>
+          <dd>現金のみ</dd>
+        </dl>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="fixed-footer">
+    <div class="footer-container">
+      <a href="https://www.instagram.com/minsei_kayashima/" target="_blank" rel="noopener" class="f-btn btn-insta">
+        <i data-lucide="instagram"></i><span>営業確認</span>
+      </a>
+      <a href="#access" class="f-btn btn-info">
+        <i data-lucide="info"></i><span>店舗情報</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=%E5%AF%9D%E5%B1%8B%E5%B7%9D%E5%B8%82%E8%90%B1%E5%B3%B6%E4%BF%A1%E5%92%8C%E7%94%BA4-3" target="_blank" rel="noopener" class="f-btn btn-map">
+        <i data-lucide="map-pin"></i><span>地図</span>
+      </a>
+      <a href="tel:0728229402" class="f-btn btn-tel">
+        <i data-lucide="phone"></i><span>電話</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const menuData = {
+      lunch: [
+        { name: "サービスランチ", note: "平日限定・日替わり", price: "850円" },
+        { name: "ラーメンセット", note: "ライス付", price: "800円" },
+        { name: "ワンタン麺セット", note: "ライス付", price: "800円" },
+        { name: "チャーハン麺セット", note: "", price: "950円" },
+        { name: "からあげセット", note: "ライス・スープ付", price: "900円" },
+        { name: "すぶたセット", note: "ライス・スープ付", price: "980円" },
+        { name: "（セット変更）", note: "＋200円でチャーハン変更可", price: "" },
+        { name: "ランチコース", note: "2名様〜", price: "1,650円" }
+      ],
+      cold: [
+        { name:"前菜盛合せ", note:"3〜5名", price:"2,850円" },
+        { name:"白切鶏（ムシトリ）", note:"", price:"1,120円" },
+        { name:"酢クラゲ", note:"", price:"1,000円" },
+        { name:"ピータン", note:"", price:"250円" },
+        { name:"ザーサイ", note:"", price:"250円" },
+        { name:"砂ずりの醤油煮", note:"", price:"500円" }
+      ],
+      soup: [
+        { name:"ふかひれスープ", note:"小", price:"1,900円" },
+        { name:"ふかひれスープ", note:"中", price:"2,900円" },
+        { name:"アワビスープ", note:"小", price:"1,400円" },
+        { name:"アワビスープ", note:"中", price:"2,200円" },
+        { name:"コーンスープ", note:"小", price:"800円" },
+        { name:"コーンスープ", note:"中", price:"1,200円" },
+        { name:"たまごスープ", note:"小", price:"500円" },
+        { name:"たまごスープ", note:"中", price:"700円" },
+        { name:"五目スープ", note:"小", price:"700円" },
+        { name:"五目スープ", note:"中", price:"1,400円" },
+        { name:"野菜スープ", note:"小", price:"600円" },
+        { name:"野菜スープ", note:"中", price:"900円" }
+      ],
+      fried: [
+        { name:"イカ天ぷら", note:"小", price:"1,350円" },
+        { name:"イカ天ぷら", note:"中", price:"2,150円" },
+        { name:"イカ天ぷら", note:"ハーフ", price:"650円" },
+        { name:"エビ天ぷら", note:"小", price:"1,120円" },
+        { name:"エビ天ぷら", note:"中", price:"1,750円" },
+        { name:"エビ天ぷら", note:"ハーフ", price:"650円" },
+        { name:"かしわからあげ", note:"小", price:"1,120円" },
+        { name:"かしわからあげ", note:"中", price:"1,750円" },
+        { name:"かしわからあげ", note:"ハーフ", price:"650円" },
+        { name:"かしわ天ぷら", note:"小", price:"1,120円" },
+        { name:"かしわ天ぷら", note:"中", price:"1,750円" },
+        { name:"かしわ天ぷら", note:"ハーフ", price:"650円" },
+        { name:"豚天ぷら", note:"小", price:"1,120円" },
+        { name:"豚天ぷら", note:"中", price:"1,750円" },
+        { name:"豚天ぷら", note:"ハーフ", price:"650円" },
+        { name:"あげワンタン", note:"小", price:"1,120円" },
+        { name:"あげワンタン", note:"中", price:"1,750円" },
+        { name:"あげギョーザ", note:"", price:"750円" },
+        { name:"ヤキトリ", note:"小", price:"1,120円" },
+        { name:"ヤキトリ", note:"中", price:"1,750円" },
+        { name:"ハルマキ", note:"日・祝日", price:"1,200円" },
+        { name:"ハルマキ", note:"中", price:"1,800円" }
+      ],
+      seafood: [
+        { name:"大エビチリソース", note:"小", price:"1,780円" },
+        { name:"大エビチリソース", note:"中", price:"2,600円" },
+        { name:"大エビチリソース", note:"ハーフ", price:"980円" },
+        { name:"大エビケチャップいため", note:"小", price:"1,780円" },
+        { name:"大エビケチャップいため", note:"中", price:"2,600円" },
+        { name:"大エビケチャップいため", note:"ハーフ", price:"980円" },
+        { name:"エビマヨネーズ", note:"小", price:"1,480円" },
+        { name:"エビマヨネーズ", note:"中", price:"1,980円" },
+        { name:"エビマヨネーズ", note:"ハーフ", price:"780円" },
+        { name:"アワビ・エビ・イカのいりつけ", note:"小", price:"2,850円" },
+        { name:"アワビ・エビ・イカのいりつけ", note:"中", price:"4,500円" },
+        { name:"芙蓉蝦（エビと卵のいりつけ）", note:"小", price:"1,120円" },
+        { name:"芙蓉蝦（エビと卵のいりつけ）", note:"中", price:"1,750円" }
+      ],
+      meat: [
+        { name:"すぶた（古老肉）", note:"小", price:"1,120円" },
+        { name:"すぶた（古老肉）", note:"中", price:"1,750円" },
+        { name:"レタス包み", note:"小", price:"1,650円" },
+        { name:"レタス包み", note:"中", price:"2,500円" },
+        { name:"肉あげだんご／甘酢だんご", note:"小", price:"1,120円" },
+        { name:"肉あげだんご／甘酢だんご", note:"中", price:"1,750円" },
+        { name:"カシューナッツと鶏のいりつけ", note:"小", price:"1,250円" },
+        { name:"カシューナッツと鶏のいりつけ", note:"中", price:"1,900円" },
+        { name:"豚細切りピーマンいため（青椒肉絲）", note:"小", price:"1,250円" },
+        { name:"豚細切りピーマンいため（青椒肉絲）", note:"中", price:"1,900円" }
+      ],
+      veg: [
+        { name:"八宝菜", note:"小", price:"1,120円" },
+        { name:"八宝菜", note:"中", price:"1,750円" },
+        { name:"野菜炒め", note:"小", price:"800円" },
+        { name:"野菜炒め", note:"中", price:"1,200円" },
+        { name:"モヤシ炒め", note:"小", price:"700円" },
+        { name:"モヤシ炒め", note:"中", price:"1,100円" },
+        { name:"青菜炒め", note:"小", price:"850円" },
+        { name:"青菜炒め", note:"中", price:"1,300円" },
+        { name:"青菜と豆腐炒め", note:"小", price:"1,250円" },
+        { name:"青菜と豆腐炒め", note:"中", price:"1,900円" },
+        { name:"ニラ玉子", note:"小", price:"850円" },
+        { name:"ニラ玉子", note:"中", price:"1,300円" },
+        { name:"麻婆豆腐", note:"小", price:"820円" },
+        { name:"麻婆豆腐", note:"中", price:"1,250円" }
+      ],
+      rice: [
+        { name:"炒飯（ヤキメシ）", note:"小", price:"750円" },
+        { name:"炒飯（ヤキメシ）", note:"中", price:"980円" },
+        { name:"炒飯（ヤキメシ）", note:"ハーフ", price:"400円" },
+        { name:"五目ヤキメシ（揚州炒飯）", note:"小", price:"900円" },
+        { name:"五目ヤキメシ（揚州炒飯）", note:"中", price:"1,200円" },
+        { name:"中華丼", note:"小", price:"850円" },
+        { name:"中華丼", note:"中", price:"1,100円" },
+        { name:"麻婆丼", note:"小", price:"850円" },
+        { name:"麻婆丼", note:"中", price:"1,100円" },
+        { name:"肉めし", note:"小", price:"850円" },
+        { name:"肉めし", note:"中", price:"1,100円" },
+        { name:"天津飯", note:"小", price:"850円" },
+        { name:"天津飯", note:"中", price:"1,100円" }
+      ],
+      noodle: [
+        { name:"しるそば（湯麺）", note:"小", price:"550円" },
+        { name:"しるそば（湯麺）", note:"大", price:"850円" },
+        { name:"ワンタンめん（雲呑麺）", note:"小", price:"850円" },
+        { name:"ワンタンめん（雲呑麺）", note:"大", price:"1,200円" },
+        { name:"チャーシューめん（叉焼麺）", note:"小", price:"850円" },
+        { name:"チャーシューめん（叉焼麺）", note:"大", price:"1,200円" },
+        { name:"にくそば（肉絲麺）", note:"小", price:"850円" },
+        { name:"にくそば（肉絲麺）", note:"大", price:"1,300円" },
+        { name:"五目汁そば（揚州麺）", note:"小", price:"850円" },
+        { name:"五目汁そば（揚州麺）", note:"大", price:"1,300円" },
+        { name:"五目ワンタンめん（揚州雲呑麺）", note:"小", price:"970円" },
+        { name:"五目ワンタンめん（揚州雲呑麺）", note:"大", price:"1,450円" },
+        { name:"油めん汁そば（イーフー麺）", note:"小", price:"970円" },
+        { name:"油めん汁そば（イーフー麺）", note:"大", price:"1,450円" },
+        { name:"チャンポン", note:"小", price:"850円" },
+        { name:"チャンポン", note:"大", price:"1,300円" },
+        { name:"タンタンめん（担々麺）", note:"小", price:"850円" },
+        { name:"タンタンめん（担々麺）", note:"大", price:"1,300円" },
+        { name:"海鮮汁そば", note:"小", price:"1,230円" },
+        { name:"海鮮汁そば", note:"大", price:"1,700円" },
+        { name:"マーボーめん（麻婆麺）", note:"小", price:"850円" },
+        { name:"マーボーめん（麻婆麺）", note:"大", price:"1,300円" },
+        { name:"てんしんめん（天津麺）", note:"小", price:"850円" },
+        { name:"てんしんめん（天津麺）", note:"大", price:"1,300円" },
+        { name:"いためそば", note:"小", price:"780円" },
+        { name:"いためそば", note:"大", price:"1,200円" },
+        { name:"あんかけやきそば（炒麺）", note:"小", price:"800円" },
+        { name:"あんかけやきそば（炒麺）", note:"大", price:"1,200円" },
+        { name:"五目やきそば（揚州炒麺）", note:"小", price:"920円" },
+        { name:"五目やきそば（揚州炒麺）", note:"大", price:"1,400円" },
+        { name:"あげそば（揚麺）", note:"小", price:"850円" },
+        { name:"あげそば（揚麺）", note:"大", price:"1,300円" },
+        { name:"焼ビーフン", note:"小", price:"800円" },
+        { name:"焼ビーフン", note:"大", price:"1,200円" },
+        { name:"汁ビーフン", note:"小", price:"800円" },
+        { name:"汁ビーフン", note:"大", price:"1,200円" },
+        { name:"ワンタン（雲呑）", note:"小", price:"530円" },
+        { name:"ワンタン（雲呑）", note:"大", price:"850円" },
+        { name:"五目ワンタン（揚州雲呑）", note:"小", price:"850円" },
+        { name:"五目ワンタン（揚州雲呑）", note:"大", price:"1,300円" },
+        { name:"水ギョーザ（水餃子）", note:"", price:"750円" },
+        { name:"焼ギョーザ（焼餃子）", note:"", price:"400円" }
+      ],
+      dessert: [
+        { name:"アメイモ", note:"", price:"900円" },
+        { name:"ゴマ団子", note:"5ヶ", price:"500円" },
+        { name:"肉まん", note:"5ヶ", price:"550円" },
+        { name:"杏仁豆腐", note:"", price:"320円" },
+        { name:"マンゴープリン", note:"", price:"300円" }
+      ],
+      drink: [
+        { name:"紹興酒", note:"ボトル", price:"1,800円" },
+        { name:"紹興酒", note:"ハーフボトル", price:"1,000円" },
+        { name:"老酒", note:"", price:"500円" },
+        { name:"日本酒", note:"2合", price:"800円" },
+        { name:"日本酒", note:"1合", price:"450円" },
+        { name:"冷酒", note:"", price:"720円" },
+        { name:"生ビール", note:"中ジョッキ", price:"600円" },
+        { name:"グラスビール", note:"", price:"450円" },
+        { name:"瓶ビール", note:"大瓶", price:"680円" },
+        { name:"青島ビール", note:"", price:"450円" },
+        { name:"チューハイ", note:"", price:"400円" },
+        { name:"ハイボール", note:"", price:"450円" },
+        { name:"ノンアルコール（ドライゼロ）", note:"", price:"400円" },
+        { name:"コーラ", note:"", price:"300円" },
+        { name:"オレンジ", note:"", price:"300円" },
+        { name:"ウーロン茶", note:"", price:"300円" }
+      ],
+      special: [
+        { name:"前菜三種盛", note:"ムシトリ・酢クラゲ・ピータン", price:"1,400円" },
+        { name:"カキ天", note:"小", price:"1,100円" },
+        { name:"カキ天", note:"ハーフ", price:"650円" },
+        { name:"牛肉とアスパラ炒め", note:"", price:"1,100円" }
+      ]
+    };
+
+    function renderMenuList(category, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container || !menuData[category]) return;
+
+      container.innerHTML = menuData[category].map(item => `
+        <li class="menu-item">
+          <div>
+            <div class="menu-item-name">${item.name}</div>
+            ${item.note ? `<div class="menu-item-note">${item.note}</div>` : ``}
+          </div>
+          ${item.price ? `<div class="menu-item-price">${item.price}</div>` : `<div class="menu-item-price"></div>`}
+        </li>
+      `).join('');
+    }
+
+    document.querySelectorAll('.menu-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const targetId = 'panel-' + tab.dataset.tab;
+        document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById(targetId)?.classList.add('active');
+      });
+    });
+
+    renderMenuList('lunch','list-lunch');
+    renderMenuList('cold','list-cold');
+    renderMenuList('soup','list-soup');
+    renderMenuList('fried','list-fried');
+    renderMenuList('seafood','list-seafood');
+    renderMenuList('meat','list-meat');
+    renderMenuList('veg','list-veg');
+    renderMenuList('rice','list-rice');
+    renderMenuList('noodle','list-noodle');
+    renderMenuList('dessert','list-dessert');
+    renderMenuList('drink','list-drink');
+    renderMenuList('special','list-special');
+  </script>
+</body>
+</html>
