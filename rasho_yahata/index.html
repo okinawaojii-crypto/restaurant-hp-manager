@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>ラーメンショップ 八幡宿｜〇化系×開化楼｜深夜3時まで</title>
+  <meta name="description" content="〇化（丸化）系×浅草開化楼。だからネギが刺さる。キッチンカーでも味の芯はブレない。深夜3時まで営業。市原市八幡。" />
+
+  <!-- OGP（SNSシェア用） -->
+  <meta property="og:title" content="ラーメンショップ 八幡宿｜〇化系×開化楼｜深夜3時まで" />
+  <meta property="og:description" content="〇化（丸化）系×浅草開化楼。キッチンカーでも味の芯はブレない。迷ったらネギ。深夜3時まで営業。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.com/image/gaikan2.jpg" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:site_name" content="ラーメンショップ 八幡宿キッチンカー店" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ラーメンショップ 八幡宿｜〇化系×開化楼｜深夜3時まで" />
+  <meta name="twitter:description" content="〇化（丸化）系×浅草開化楼。キッチンカーでも味の芯はブレない。迷ったらネギ。深夜3時まで営業。" />
+  <meta name="twitter:image" content="https://example.com/image/gaikan2.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root { --header-h: 140px; --bottombar-h: 92px; }
+    @media (min-width: 1024px) { :root { --header-h: 170px; --bottombar-h: 0px; } }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      padding-top: var(--header-h);
+    }
+    .scroll-mt-28 { scroll-margin-top: 7rem; }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
+</head>
+
+<!-- ✅モバイル固定導線ぶん下に余白（被り防止） -->
+<body class="min-h-screen pb-[120px] lg:pb-0 text-white selection:bg-yellow-300 selection:text-neutral-900
+  bg-black bg-[radial-gradient(ellipse_at_center,rgba(255,0,0,0.15),transparent_60%)]">
+
+<header id="header-container" class="fixed top-0 inset-x-0 z-50 border-b-4 border-black">
+    <!-- のれん（赤）1段に統合 -->
+    <div class="bg-[#d40000]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-3 sm:py-4 flex items-center justify-between gap-3">
+          <!-- 左：暖簾ロゴ（デカい） -->
+          <button onclick="scrollToSection('home')" class="text-left">
+            <div class="text-sm sm:text-base font-black text-yellow-300 tracking-widest">
+              うまい　ラーメンショップ　うまい
+            </div>
+            <div class="mt-1 text-[26px] sm:text-4xl lg:text-5xl font-black text-white leading-none">
+              ラーメンショップ <span class="text-yellow-300">八幡宿</span> キッチンカー
+            </div>
+            <div class="mt-2 text-sm sm:text-lg font-black text-white/95">
+              深夜3時まで（火・水・木）
+              <span class="hidden sm:inline"> / 市原市八幡</span>
+            </div>
+          </button>
+
+          <!-- 右：強制導線 3ボタン（でかい） -->
+          <div class="hidden lg:flex items-center gap-2 shrink-0">
+            <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-5 py-4 rounded bg-black text-white font-black text-lg
+                      border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.75)] hover:opacity-90">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </span>
+              <span>営業</span>
+            </a>
+            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-5 py-4 rounded bg-emerald-700 text-white font-black text-lg
+                      border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.75)] hover:bg-emerald-800">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </span>
+              <span>地図</span>
+            </a>
+            <button onclick="scrollToSection('menu')"
+               class="inline-flex items-center justify-center gap-2 px-5 py-4 rounded bg-yellow-300 text-neutral-900 font-black text-lg
+                      border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.75)] hover:bg-yellow-200">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="utensils" class="w-5 h-5"></i>
+              </span>
+              <span>メニュー</span>
+            </button>
+          </div>
+
+          <!-- スマホ：MENUボタンだけ（導線3つは下の固定バーに任せる） -->
+          <button onclick="toggleMenu()"
+            class="lg:hidden inline-flex items-center justify-center px-4 py-3 rounded bg-black/40 hover:bg-black/55
+                   border-2 border-black font-black">
+            <i id="menu-icon" data-lucide="menu" class="w-5 h-5 mr-2"></i>
+            <i id="close-icon" data-lucide="x" class="hidden w-5 h-5 mr-2"></i>
+            MENU
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-neutral-950 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2">
+        <button onclick="scrollToSection('menu')" class="w-full text-left px-4 py-4 rounded font-black text-lg border border-white/10 bg-white/5 hover:bg-white/10">メニュー</button>
+        <button onclick="scrollToSection('today')" class="w-full text-left px-4 py-4 rounded font-black text-lg border border-white/10 bg-white/5 hover:bg-white/10">今日やってる？</button>
+        <button onclick="scrollToSection('gallery')" class="w-full text-left px-4 py-4 rounded font-black text-lg border border-white/10 bg-white/5 hover:bg-white/10">写真</button>
+        <button onclick="scrollToSection('guide')" class="w-full text-left px-4 py-4 rounded font-black text-lg border border-white/10 bg-white/5 hover:bg-white/10">はじめて</button>
+        <button onclick="scrollToSection('access')" class="w-full text-left px-4 py-4 rounded font-black text-lg border border-white/10 bg-white/5 hover:bg-white/10">場所</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- スマホ固定：強制導線（営業/地図/メニュー） -->
+  <div class="lg:hidden fixed bottom-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-3 pb-[max(10px,env(safe-area-inset-bottom))] pt-2
+                bg-neutral-950/90 backdrop-blur border-t border-white/10">
+      <div class="grid grid-cols-3 gap-2">
+        <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 py-3 rounded bg-red-600 text-white font-black text-sm
+                 shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </span>
+          <span>今日やってる？</span>
+        </a>
+
+        <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 py-3 rounded bg-emerald-700 text-white font-black text-sm
+                 shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </span>
+          <span>ここに来る</span>
+        </a>
+
+        <button onclick="scrollToSection('menu')"
+          class="inline-flex items-center justify-center gap-2 py-3 rounded bg-yellow-300 text-neutral-900 font-black text-sm
+                 shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </span>
+          <span>何食う？</span>
+        </button>
+      </div>
+
+      <div class="mt-2 text-[11px] font-black text-white/70 text-center">
+        ※出店場所・休業・変更はInstagramで当日更新
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-0 lg:pt-6 lg:pb-0">
+      <div class="grid lg:grid-cols-12 gap-3 lg:gap-6 items-stretch">
+
+        <!-- 左：外観写真ドン（キッチンカー感をスマホで強化） -->
+        <div class="lg:col-span-7 flex flex-col h-full">
+          <div class="relative bg-white border-4 border-black
+                      shadow-[0_18px_45px_rgba(0,0,0,0.55),6px_6px_0_0_rgba(0,0,0,0.85)]
+                      overflow-hidden h-full">
+
+            <!-- 画像 -->
+            <div class="w-full h-[56svh] sm:h-[62svh] lg:h-full relative">
+              <img
+                src="image/gaikan2.jpg"
+                alt="ラーメンショップ 八幡宿キッチンカー 外観"
+                class="block w-full h-full object-cover object-left lg:object-center"
+                loading="eager"
+                onerror="this.src='https://placehold.co/800x450/1a1a1a/ffffff?text=RAMEN+SHOP'"
+              >
+
+              <!-- ✅スマホだけ：夜の屋台っぽい"ネオン感" -->
+              <div class="lg:hidden absolute inset-0 pointer-events-none
+                          bg-[radial-gradient(ellipse_at_bottom,rgba(255,0,0,0.22),transparent_55%),linear-gradient(to_top,rgba(0,0,0,0.65),transparent_45%)]">
+              </div>
+
+              <!-- ✅スマホだけ：屋台ステッカー（営業中/深夜3時/現金PayPay） -->
+              <div class="lg:hidden absolute top-3 left-3 right-3 flex flex-wrap gap-2">
+                <div class="px-3 py-2 bg-yellow-300 text-neutral-900 font-black border-2 border-black
+                            shadow-[3px_3px_0_0_rgba(0,0,0,0.75)] text-xs">
+                  🚚 キッチンカー
+                </div>
+                <div class="px-3 py-2 bg-red-600 text-white font-black border-2 border-black
+                            shadow-[3px_3px_0_0_rgba(0,0,0,0.75)] text-xs">
+                  深夜3時まで
+                </div>
+                <div class="ml-auto px-3 py-2 bg-neutral-900 text-white font-black border-2 border-black
+                            shadow-[3px_3px_0_0_rgba(0,0,0,0.75)] text-xs">
+                  現金 / PayPay
+                </div>
+              </div>
+
+              <!-- ✅スマホだけ：Instagram誘導バッジ -->
+              <div class="lg:hidden absolute top-16 left-3 bg-yellow-300 text-neutral-900 font-black px-3 py-2 border-2 border-black
+                          shadow-[4px_4px_0_0_rgba(0,0,0,0.8)] text-sm">
+                📍 今夜の出店はInstagramで
+              </div>
+
+              <!-- ✅スマホだけ：写真に貼り付く"屋台札"（迷ったらネギ） -->
+              <div class="lg:hidden absolute left-3 right-3 bottom-3">
+                <div class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.65)] overflow-hidden">
+                  <div class="grid grid-cols-[92px_1fr]">
+                    <div class="h-[92px]">
+                      <img src="image/negira-men.jpg"
+                           alt="ネギラーメン 背脂"
+                           class="block w-full h-full object-cover"
+                           loading="eager">
+                    </div>
+                    <div class="p-3 flex flex-col justify-center">
+                      <div class="text-[13px] font-black text-neutral-700">迷ったら</div>
+                      <div class="text-lg font-black text-neutral-900 leading-tight">ネギ。</div>
+                      <div class="text-xs font-black text-neutral-600">背脂 × 白髪ネギ</div>
+                      <div class="text-2xl font-black text-red-600">¥850</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 右：3秒パネル（読みやすさ最優先） -->
+        <div class="lg:col-span-5 flex lg:mt-0 relative mt-3 lg:static">
+          <div class="w-full bg-white/95 lg:bg-white text-neutral-900 border-4 border-black
+                      shadow-[0_18px_45px_rgba(0,0,0,0.55),6px_6px_0_0_rgba(0,0,0,0.85)]
+                      p-4 sm:p-5 lg:p-6 flex flex-col">
+
+            <!-- 上：タグ -->
+            <div class="flex items-center justify-between gap-3">
+              <div class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 text-neutral-900 font-black text-sm
+                          shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+                <i data-lucide="truck" class="w-5 h-5"></i> キッチンカーのラーメンショップ
+              </div>
+              <div class="hidden sm:inline-flex items-center gap-2 text-xs font-black text-neutral-700">
+                <span class="inline-flex items-center gap-1"><i data-lucide="map-pin" class="w-5 h-5 text-red-600"></i> 市原市八幡</span>
+              </div>
+            </div>
+
+            <!-- 中：メインコピー（デカい・短い） -->
+            <h1 class="mt-4 text-[32px] sm:text-[38px] lg:text-[44px] font-black tracking-tight leading-[1.05]">
+              背脂、ネギ。<br>
+              豚骨醤油。<br>
+              <span class="text-red-600">深夜3時まで。</span>
+            </h1>
+
+            <!-- 3秒情報（大きく・一発で） -->
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div class="border-2 border-black p-3">
+                <div class="text-[11px] font-black text-neutral-600">営業</div>
+                <div class="mt-1 text-base font-black">火・水・木</div>
+                <div class="text-xl font-black">20:00–翌3:00</div>
+              </div>
+              <div class="border-2 border-black p-3">
+                <div class="text-[11px] font-black text-neutral-600">人気</div>
+                <div class="mt-1 text-base font-black">迷ったら</div>
+                <div class="text-xl font-black text-red-600">ネギ</div>
+              </div>
+              <div class="border-2 border-black p-3">
+                <div class="text-[11px] font-black text-neutral-600">支払い</div>
+                <div class="mt-1 text-base font-black">現金 / PayPay</div>
+                <div class="text-sm font-black text-neutral-700">先払い → 番号札</div>
+              </div>
+            </div>
+
+            <!-- 強制導線（売上に効く）：3ボタン -->
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <!-- 営業（Instagram） -->
+              <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-red-600 hover:bg-red-700
+                        text-white font-black text-base border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                </span>
+                <span>今夜の営業</span>
+              </a>
+
+              <!-- 地図 -->
+              <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-emerald-700 hover:bg-emerald-800
+                        text-white font-black text-base border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </span>
+                <span>地図</span>
+              </a>
+
+              <!-- メニューへ（ページ内スクロール） -->
+              <button onclick="scrollToSection('menu')"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-neutral-900 hover:bg-neutral-800
+                        text-white font-black text-base border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="utensils" class="w-5 h-5"></i>
+                </span>
+                <span>メニュー</span>
+              </button>
+            </div>
+
+            <!-- 補助コピー -->
+            <p class="mt-3 text-base font-black text-neutral-800">
+              深夜、腹が減ったらここ。
+            </p>
+            <p class="mt-1 text-sm font-black text-neutral-600">
+              今夜の場所は<span class="text-red-600">Instagram</span>で更新。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅3秒コピー（店の核を一発で） -->
+      <div class="mt-5">
+        <div class="bg-black border-4 border-yellow-300 shadow-[6px_6px_0_0_rgba(255,255,0,0.3)] p-5 lg:p-7 text-center">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+            <span class="text-yellow-300">〇化（丸化）系</span>
+            <span class="text-white/60"> × </span>
+            <span class="text-white">浅草開化楼</span><span class="text-white/60">。</span><br class="sm:hidden">
+            <span class="text-white/80">だから、</span><span class="text-red-500">ネギが刺さる。</span>
+          </div>
+          <p class="mt-3 text-base sm:text-lg font-black text-white/70">
+            キッチンカーでも、味の芯はブレない。
+          </p>
+        </div>
+      </div>
+
+      <!-- ✅PC/スマホ共通：HERO直下の"3秒導線"（看板風） -->
+      <div class="mt-4">
+        <div class="bg-white border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.8)] p-5 lg:p-6 text-neutral-900">
+          <div class="text-sm font-black tracking-widest text-neutral-600">
+            来る前にこれだけ
+          </div>
+
+          <h3 class="mt-2 text-2xl sm:text-3xl font-black">
+            まずはこの3つ
+          </h3>
+
+          <div class="mt-4 grid sm:grid-cols-3 gap-3">
+            <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-between border-2 border-black px-4 py-3 font-black hover:bg-neutral-100">
+              <span>① 今日やってる？</span>
+              <span class="text-red-600">営業</span>
+            </a>
+            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-between border-2 border-black px-4 py-3 font-black hover:bg-neutral-100">
+              <span>② どこにある？</span>
+              <span class="text-emerald-700">地図</span>
+            </a>
+            <button onclick="scrollToSection('menu')"
+              class="flex items-center justify-between border-2 border-black px-4 py-3 font-black hover:bg-neutral-100 text-left">
+              <span>③ 何食べる？</span>
+              <span class="text-yellow-600">メニュー</span>
+            </button>
+          </div>
+
+          <p class="mt-3 text-sm font-black text-neutral-600">
+            ※ 出店場所・休業・時間変更はInstagramで当日更新（フォロー不要）
+          </p>
+        </div>
+      </div>
+
+      <!-- こだわり3カード（コンパクト版） -->
+      <section class="mt-6">
+        <div class="grid lg:grid-cols-3 gap-4">
+          <!-- 〇化系 -->
+          <div class="bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-5">
+            <div class="text-xs font-black tracking-widest text-neutral-600">味の系譜</div>
+            <h3 class="mt-2 text-2xl font-black">〇化系（丸化）</h3>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              〇化（丸化）系は、ラーメンショップの中でも
+              <span class="text-neutral-900">味・仕込み・運営ノウハウを共有する信頼の系譜</span>。
+              初見でも「方向性が読みやすい」のが特徴。
+            </p>
+          </div>
+
+          <!-- 開化楼 -->
+          <div class="bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-5">
+            <div class="text-xs font-black tracking-widest text-neutral-600">麺のこだわり</div>
+            <h3 class="mt-2 text-2xl font-black">浅草開化楼の麺</h3>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              低加水で密度が高く、豚骨醤油×背脂に負けない。
+              <span class="text-neutral-900">最後まで噛める麺</span>。
+            </p>
+            <div class="mt-3 bg-yellow-300 border-2 border-black px-4 py-2 font-black text-sm">
+              「"化"は"開化楼"から」
+            </div>
+          </div>
+
+          <!-- 修行→キッチンカー -->
+          <div class="bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-5">
+            <div class="text-xs font-black tracking-widest text-neutral-600">店のストーリー</div>
+            <h3 class="mt-2 text-2xl font-black">修行 → 独立 → 深夜</h3>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              市原山木店など〇化系で修行した店主が独立。
+              キッチンカーでも<span class="text-neutral-900">基本を崩さない</span>。
+            </p>
+            <div class="mt-4 flex gap-2">
+              <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded bg-red-600 text-white font-black border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                </span>
+                <span>今夜の営業を見る</span>
+              </a>
+              <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded bg-emerald-700 text-white font-black border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </span>
+                <span>地図で行く</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- ② 3秒理解ブロック（集客の核） -->
+  <section id="features" class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300
+                  text-neutral-900 font-black text-xs sm:text-sm
+                  border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+        3秒でわかる
+      </div>
+
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        <span class="text-yellow-300">〇化（丸化）系</span> × <span class="text-white">浅草開化楼</span><br>
+        だから、<span class="text-red-600">ネギ</span>が刺さる。
+      </h2>
+
+      <p class="mt-3 text-white/75 font-black text-base sm:text-lg">
+        キッチンカーでも、味の芯はブレない。
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div class="bg-white text-neutral-900 border-2 border-black px-4 py-3 font-black">
+          <div class="text-xs text-neutral-600">系譜</div>
+          <div>〇化（丸化）系</div>
+        </div>
+        <div class="bg-white text-neutral-900 border-2 border-black px-4 py-3 font-black">
+          <div class="text-xs text-neutral-600">麺</div>
+          <div>浅草開化楼</div>
+        </div>
+        <div class="bg-white text-neutral-900 border-2 border-black px-4 py-3 font-black">
+          <div class="text-xs text-neutral-600">推し</div>
+          <div class="text-red-600">ネギ</div>
+        </div>
+        <div class="bg-white text-neutral-900 border-2 border-black px-4 py-3 font-black">
+          <div class="text-xs text-neutral-600">営業</div>
+          <div>深夜3時</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORY：この店の強み（シンプル版） -->
+  <section id="story" class="py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- 3秒タグ -->
+      <div class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 text-neutral-900 font-black text-xs sm:text-sm
+                  border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+        3秒でわかる：この店の強み
+      </div>
+
+      <!-- 結論（短く） -->
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
+        キッチンカーでも、<span class="text-red-500">味がブレない。</span>
+      </h2>
+      <p class="mt-2 text-white/75 font-black text-base sm:text-lg">
+        〇化系の系譜 × 開化楼の麺。だから<span class="text-yellow-300">ネギが刺さる</span>。
+      </p>
+
+      <!-- 根拠（3つだけ・でかく・短く） -->
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="bg-white text-neutral-900 border-4 border-black p-5
+                    shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="text-xs font-black text-neutral-600 tracking-widest">系譜</div>
+          <div class="mt-2 text-2xl font-black">〇化系（丸化）</div>
+          <div class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+            <span class="text-neutral-900">味・仕込み・運営ノウハウを共有する信頼の系譜</span>。
+          </div>
+        </div>
+
+        <div class="bg-white text-neutral-900 border-4 border-black p-5
+                    shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="text-xs font-black text-neutral-600 tracking-widest">麺</div>
+          <div class="mt-2 text-2xl font-black">浅草 開化楼麺</div>
+          <div class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+            低加水で密度が高く、豚骨醤油×背脂に負けない。<span class="text-neutral-900">最後まで噛める</span>。
+          </div>
+        </div>
+
+        <div class="bg-white text-neutral-900 border-4 border-black p-5
+                    shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="text-xs font-black text-neutral-600 tracking-widest">営業</div>
+          <div class="mt-2 text-2xl font-black">火・水・木 深夜3時</div>
+          <div class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+            仕事終わりの一杯に、ちゃんと間に合う。
+          </div>
+        </div>
+      </div>
+
+      <!-- 行動（ここで"行く"が決まる） -->
+      <div class="mt-6 grid sm:grid-cols-3 gap-2">
+        <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-red-600 hover:bg-red-700
+                  text-white font-black border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </span>
+          <span>今夜の営業を見る</span>
+        </a>
+        <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-emerald-700 hover:bg-emerald-800
+                  text-white font-black border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </span>
+          <span>地図で行く</span>
+        </a>
+        <button onclick="scrollToSection('menu')"
+           class="inline-flex items-center justify-center gap-2 px-4 py-4 rounded bg-yellow-300 hover:bg-yellow-200
+                  text-neutral-900 font-black border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.7)]">
+          <span class="inline-flex items-center justify-center w-5 h-5">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </span>
+          <span>メニューを見る</span>
+        </button>
+      </div>
+
+      <!-- 詳細（読みたい人だけ） -->
+      <details class="mt-6 bg-white/5 border border-white/10 rounded-xl p-4">
+        <summary class="cursor-pointer font-black text-white">
+          もう少し詳しく（タップで開く）
+        </summary>
+        <div class="mt-3 grid lg:grid-cols-3 gap-4 text-white/85">
+          <div class="bg-white text-neutral-900 border-2 border-black p-4">
+            <div class="text-xs font-black text-neutral-600">ABOUT</div>
+            <div class="mt-2 text-lg font-black">「〇化（丸化）系」</div>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              〇化（丸化）系は、ラーメンショップの中でも
+              <span class="text-neutral-900">味・仕込み・運営ノウハウを共有する信頼の系譜</span>。
+              初見でも「方向性が読みやすい」のが特徴。
+            </p>
+          </div>
+
+          <div class="bg-white text-neutral-900 border-2 border-black p-4">
+            <div class="text-xs font-black text-neutral-600">NOODLES</div>
+            <div class="mt-2 text-lg font-black">浅草開化楼の麺</div>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              低加水で密度が高く、豚骨醤油×背脂に負けない。
+              <span class="text-neutral-900">最後まで噛める麺</span>。
+            </p>
+            <div class="mt-3 px-3 py-2 bg-yellow-300 border-2 border-black font-black text-sm">
+              「"化"は"開化楼"から」
+            </div>
+          </div>
+
+          <div class="bg-white text-neutral-900 border-2 border-black p-4">
+            <div class="text-xs font-black text-neutral-600">LINEAGE</div>
+            <div class="mt-2 text-lg font-black">修行 → 独立</div>
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-relaxed">
+              市原山木店など〇化系で修行した店主が独立。
+              キッチンカーでも<span class="text-neutral-900">基本を崩さない</span>。
+            </p>
+            <div class="mt-4 grid gap-2">
+              <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                <div class="font-black">迷ったら</div>
+                <div class="font-black text-red-600">ネギ</div>
+              </div>
+              <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                <div class="font-black">締めに</div>
+                <div class="font-black text-red-600">辛ネギ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- 座席 -->
+  <section class="py-8 lg:py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border-4 border-black shadow-[0_18px_45px_rgba(0,0,0,0.55),6px_6px_0_0_rgba(0,0,0,0.85)] overflow-hidden">
+        <div class="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[3/1] w-full">
+          <img src="image/zaseki.jpg" alt="屋外テント席" class="w-full h-full object-cover block" loading="lazy" onerror="this.src='https://placehold.co/1200x600/1a1a1a/ffffff?text=SEATS'">
+        </div>
+        <div class="p-4 lg:p-5 border-t-2 border-black text-center">
+          <p class="text-xl lg:text-2xl font-black text-neutral-900">屋外テント席。車でもOK。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="py-16 border-t border-white/10 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-2 bg-emerald-700 text-white font-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">迷ったら</div>
+          <h2 class="mt-3 text-4xl md:text-5xl font-black tracking-tight">ネギ。</h2>
+          <p class="mt-2 text-white/70 font-black text-lg">見て決まる。</p>
+        </div>
+      </div>
+
+      <!-- 人気4つ（崩れないカード） -->
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- ネギラーメン -->
+        <article class="bg-white text-neutral-900 border-4 border-black shadow-[8px_8px_0_0_rgba(0,0,0,0.85)] overflow-hidden">
+          <div class="relative">
+            <div class="aspect-[16/13] w-full">
+              <img src="image/negira-men.jpg" alt="ネギラーメン"
+                   class="w-full h-full object-cover block" loading="lazy"
+                   onerror="this.src='https://placehold.co/800x650/1a1a1a/ffffff?text=NEGI'">
+            </div>
+            <!-- タグは画像上に固定（縦ズレ根絶） -->
+            <span class="absolute top-3 right-3 px-2 py-1 bg-yellow-300 text-neutral-900 font-black text-xs border-2 border-black">
+              No.1
+            </span>
+          </div>
+
+          <div class="p-5 border-t-2 border-black flex flex-col min-h-[220px]">
+            <!-- タイトルは高さ固定 -->
+            <h3 class="text-2xl font-black leading-tight min-h-[2.6em]">ネギラーメン</h3>
+
+            <!-- 説明は2行固定（線の高さ揃える） -->
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-snug line-clamp-2 min-h-[2.6em] overflow-hidden">
+              背脂×白髪ネギ。
+            </p>
+
+            <hr class="my-4 border-t-2 border-black">
+
+            <!-- 価格は下揃え -->
+            <div class="mt-auto flex items-baseline justify-between">
+              <div class="text-xs font-black text-neutral-600">価格</div>
+              <div class="text-3xl font-black text-red-600" id="menu-negi"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 辛ネギ -->
+        <article class="bg-white text-neutral-900 border-4 border-black shadow-[8px_8px_0_0_rgba(0,0,0,0.85)] overflow-hidden">
+          <div class="relative">
+            <div class="aspect-[16/13] w-full">
+              <img src="image/karanegi.ramen.jpg" alt="辛ネギ"
+                   class="w-full h-full object-cover block" loading="lazy"
+                   onerror="this.src='https://placehold.co/800x650/1a1a1a/ffffff?text=KARA'">
+            </div>
+            <span class="absolute top-3 right-3 px-2 py-1 bg-yellow-300 text-neutral-900 font-black text-xs border-2 border-black">
+              人気
+            </span>
+          </div>
+
+          <div class="p-5 border-t-2 border-black flex flex-col min-h-[220px]">
+            <h3 class="text-2xl font-black leading-tight min-h-[2.6em]">辛ネギ</h3>
+
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-snug line-clamp-2 min-h-[2.6em] overflow-hidden">
+              締めに刺さる。
+            </p>
+
+            <hr class="my-4 border-t-2 border-black">
+
+            <div class="mt-auto flex items-baseline justify-between">
+              <div class="text-xs font-black text-neutral-600">価格</div>
+              <div class="text-3xl font-black text-red-600" id="menu-karanegi"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 訳あり餃子 -->
+        <article class="bg-white text-neutral-900 border-4 border-black shadow-[8px_8px_0_0_rgba(0,0,0,0.85)] overflow-hidden">
+          <div class="aspect-[16/13] w-full">
+            <img src="image/gyouza.jpg" alt="訳あり餃子"
+                 class="w-full h-full object-cover block" loading="lazy"
+                 onerror="this.src='https://placehold.co/800x650/1a1a1a/ffffff?text=GYOZA'">
+          </div>
+
+          <div class="p-5 border-t-2 border-black flex flex-col min-h-[220px]">
+            <h3 class="text-2xl font-black leading-tight min-h-[2.6em]">訳あり餃子</h3>
+
+            <p class="mt-2 text-sm font-black text-neutral-700 leading-snug line-clamp-2 min-h-[2.6em] overflow-hidden">
+              5個。キッチンカーでのみ販売。
+            </p>
+
+            <hr class="my-4 border-t-2 border-black">
+
+            <div class="mt-auto flex items-baseline justify-between">
+              <div class="text-xs font-black text-neutral-600">価格</div>
+              <div class="text-3xl font-black text-red-600" id="menu-gyoza"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ホルモンエッグごはん -->
+        <article class="bg-white text-neutral-900 border-4 border-black shadow-[8px_8px_0_0_rgba(0,0,0,0.85)] overflow-hidden">
+          <div class="relative">
+            <div class="aspect-[16/13] w-full">
+              <img src="image/horumon.egg.jpg" alt="ホルモンエッグごはん"
+                   class="w-full h-full object-cover block" loading="lazy"
+                   onerror="this.src='https://placehold.co/800x650/1a1a1a/ffffff?text=HORUMON+EGG'">
+            </div>
+            <span class="absolute top-3 right-3 px-2 py-1 bg-yellow-300 text-neutral-900 font-black text-xs border-2 border-black">
+              人気
+            </span>
+          </div>
+
+          <div class="p-5 border-t-2 border-black flex flex-col min-h-[220px]">
+            <div class="flex items-start justify-between gap-3">
+              <div class="text-2xl font-black leading-tight">ホルモンエッグごはん</div>
+              <div class="shrink-0 px-2 py-1 bg-yellow-300 text-neutral-900 font-black text-xs border-2 border-black">
+                裏人気
+              </div>
+            </div>
+
+            <p class="mt-2 text-base font-black text-neutral-700">深夜の優勝。</p>
+
+            <div class="mt-auto border-t-2 border-black pt-3 flex items-baseline justify-between">
+              <div class="text-xs font-black text-neutral-600">価格</div>
+              <div class="text-3xl font-black text-red-600" id="menu-horumonegg"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CARD 1：どんな味？ -->
+      <div class="mt-8 bg-neutral-950/40 border border-white/10 rounded-xl p-4">
+        <h3 class="text-lg sm:text-xl font-black text-yellow-300">どんな味？</h3>
+        <p class="mt-2 text-base sm:text-lg font-black text-white/90 leading-relaxed">
+          背脂は重すぎず、ネギはシャキシャキ。<br>
+          深夜でも最後まで食える設計。
+        </p>
+      </div>
+
+      <!-- CARD 2：はじめてでも大丈夫 -->
+      <div class="mt-4 bg-neutral-950/40 border border-white/10 rounded-xl p-4">
+        <h3 class="text-lg sm:text-xl font-black text-yellow-300">はじめてでも大丈夫</h3>
+        <p class="mt-2 text-base sm:text-lg font-black text-white/90 leading-relaxed">
+          先払い → 番号札 → 呼ばれたら受け取る。<br>
+          車で待ってもOK。
+        </p>
+      </div>
+
+      <!-- CARD 3：迷ったらこれ -->
+      <div class="mt-4 mb-6 bg-neutral-950/40 border border-white/10 rounded-xl p-4">
+        <h3 class="text-lg sm:text-xl font-black text-yellow-300">迷ったらこれ</h3>
+        <ul class="mt-2 space-y-1 text-base sm:text-lg font-black text-white/90">
+          <li>初回：<span class="text-yellow-300">ネギ</span></li>
+          <li>締め：<span class="text-red-500">辛ネギ</span></li>
+          <li>＋半ライスも正解</li>
+        </ul>
+      </div>
+
+      <!-- 全メニュー（ラーショ看板：完成形） -->
+      <section class="mt-10">
+        <div class="border-4 border-black shadow-[10px_10px_0_0_rgba(0,0,0,0.9)] overflow-hidden bg-[#c40000]">
+
+          <!-- 上帯：見出し -->
+          <div class="px-5 sm:px-7 py-5 border-b-4 border-black">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+              <div>
+                <div class="text-[11px] sm:text-xs font-black tracking-[0.25em] text-white/90">RAMEN SHOP</div>
+                <h3 class="mt-1 text-2xl sm:text-3xl font-black text-white leading-tight">
+                  メニュー（全品）
+                </h3>
+              </div>
+              <div class="text-xs sm:text-sm font-black text-white/90">
+                ※キッチンカー販売のみ（通販なし）
+              </div>
+            </div>
+          </div>
+
+          <!-- メニュー価格ボード -->
+          <div class="p-4 sm:p-6">
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8" id="price-board"></div>
+
+            <!-- ✅注意書き（枠なし：区切り線だけ） -->
+            <div class="mt-6 pt-4 border-t-2 border-white/30 text-white font-black">
+              <div class="text-lg sm:text-xl leading-snug">
+                出店場所・休業・時間変更は
+                <span class="text-yellow-300">Instagramで当日更新</span>
+              </div>
+              <div class="mt-2 text-base sm:text-lg text-white/90">
+                餃子は <span class="text-yellow-300">現地限定</span>（キッチンカーのみ）／通販なし
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- TODAY -->
+  <!-- TODAY：今日やってる？（ごちゃつきゼロ版） -->
+  <!-- TODAY：今日やってる？（iframe廃止：営業確認ツール化） -->
+  <section id="today" class="py-16 bg-neutral-900 border-t border-white/10 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 見出し -->
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-black tracking-tight">今日やってる？</h2>
+          <p class="mt-2 text-xl sm:text-2xl font-black text-white">
+            深夜、腹が減ったらここ。
+          </p>
+        </div>
+
+        <!-- ここが"強制導線"：3ボタン（PCでも刺す） -->
+        <div class="grid grid-cols-3 gap-2 w-full lg:w-auto">
+          <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded bg-red-600 hover:bg-red-700 text-white font-black text-sm sm:text-base border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.75)]">
+            <span class="inline-flex items-center justify-center w-5 h-5">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </span>
+            <span>営業</span>
+          </a>
+          <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded bg-emerald-700 hover:bg-emerald-800 text-white font-black text-sm sm:text-base border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.75)]">
+            <span class="inline-flex items-center justify-center w-5 h-5">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </span>
+            <span>地図</span>
+          </a>
+          <button onclick="scrollToSection('menu')"
+             class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded bg-yellow-300 hover:bg-yellow-200 text-neutral-900 font-black text-sm sm:text-base border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.75)]">
+            <span class="inline-flex items-center justify-center w-5 h-5">
+              <i data-lucide="utensils" class="w-5 h-5"></i>
+            </span>
+            <span>メニュー</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 🍜「迷ったらこれ」1行レコメンド -->
+      <div class="mt-8 text-center">
+        <div class="text-3xl sm:text-4xl font-black tracking-tight">
+          迷ったら <span class="text-red-600">ネギラーメン ¥850</span>
+        </div>
+        <div class="mt-2 text-xl sm:text-2xl font-black text-white/80">
+          締めに <span class="text-yellow-300">辛ネギ ¥950</span>
+        </div>
+      </div>
+
+      <!-- 本体：2カラム（スマホは縦） -->
+      <div class="mt-8 grid lg:grid-cols-12 gap-6 items-start">
+
+        <!-- 左：3ステップで迷わせない -->
+        <div class="lg:col-span-7 bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-6 h-fit self-start">
+          <div class="inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 text-neutral-900 font-black shadow-[3px_3px_0_0_rgba(0,0,0,0.7)]">
+            30秒でわかる：来る前に見る順番
+          </div>
+
+          <div class="mt-5 grid md:grid-cols-3 gap-4">
+            <div class="border-2 border-black p-4">
+              <div class="w-10 h-10 bg-red-600 text-white border-2 border-black flex items-center justify-center font-black">1</div>
+              <div class="mt-3 text-lg font-black">Instagramで確認</div>
+              <p class="mt-1 text-sm font-black text-neutral-700 leading-relaxed">
+                今日の営業場所・休み・変更はここ。
+              </p>
+              <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+                 class="mt-3 inline-flex items-center justify-center gap-2 px-3 py-2 rounded bg-neutral-900 text-white font-black text-sm border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                </span>
+                <span>見に行く</span>
+              </a>
+            </div>
+
+            <div class="border-2 border-black p-4">
+              <div class="w-10 h-10 bg-emerald-700 text-white border-2 border-black flex items-center justify-center font-black">2</div>
+              <div class="mt-3 text-lg font-black">地図で行く</div>
+              <p class="mt-1 text-sm font-black text-neutral-700 leading-relaxed">
+                住所は固定。駅から徒歩もOK。
+              </p>
+              <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+                 class="mt-3 inline-flex items-center justify-center gap-2 px-3 py-2 rounded bg-emerald-700 text-white font-black text-sm border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </span>
+                <span>開く</span>
+              </a>
+            </div>
+
+            <div class="border-2 border-black p-4">
+              <div class="w-10 h-10 bg-yellow-300 text-neutral-900 border-2 border-black flex items-center justify-center font-black">3</div>
+              <div class="mt-3 text-lg font-black">メニューを決める</div>
+              <p class="mt-1 text-sm font-black text-neutral-700 leading-relaxed">
+                迷ったらネギ。締めに辛ネギ。
+              </p>
+              <button onclick="scrollToSection('menu')"
+                 class="mt-3 inline-flex items-center justify-center gap-2 px-3 py-2 rounded bg-yellow-300 text-neutral-900 font-black text-sm border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,0.7)]">
+                <span class="inline-flex items-center justify-center w-5 h-5">
+                  <i data-lucide="utensils" class="w-5 h-5"></i>
+                </span>
+                <span>見る</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 誤解をゼロにする：でも押し付けない -->
+          <div class="mt-5 border-t-2 border-black pt-4">
+            <p class="text-sm sm:text-base font-black text-neutral-800">
+              ※ <span class="text-red-600">通販はやっていません</span>。<br class="sm:hidden">
+              餃子は <span class="text-neutral-900">キッチンカーでのみ</span> 買えます（現地限定）。
+            </p>
+          </div>
+
+          <!-- 知ってると速い -->
+          <div class="mt-5 border-t-2 border-black pt-4">
+            <div class="text-xs font-black tracking-widest text-neutral-600">知ってると速い</div>
+            <div class="mt-3 grid sm:grid-cols-3 gap-3">
+              <div class="border-2 border-black p-3">
+                <div class="text-sm font-black">支払い</div>
+                <div class="text-sm font-black text-neutral-700">先払い → 番号札</div>
+              </div>
+              <div class="border-2 border-black p-3">
+                <div class="text-sm font-black">待ち方</div>
+                <div class="text-sm font-black text-neutral-700">車でもOK／テント席あり</div>
+              </div>
+              <div class="border-2 border-black p-3">
+                <div class="text-sm font-black">名物</div>
+                <div class="text-sm font-black text-neutral-700">迷ったらネギ</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3秒まとめ -->
+          <div class="mt-5 border-t-2 border-black pt-4">
+            <div class="text-xs font-black tracking-widest text-neutral-600">3秒まとめ</div>
+
+            <div class="mt-3 grid gap-2">
+              <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                <div class="font-black">迷ったら</div>
+                <div class="font-black text-red-600">ネギラーメン（¥850）</div>
+              </div>
+              <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                <div class="font-black">締めに刺さる</div>
+                <div class="font-black text-red-600">辛ネギ（¥950）</div>
+              </div>
+              <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                <div class="font-black">現地限定</div>
+                <div class="font-black">訳あり餃子（¥200）<span class="text-neutral-500">※通販なし</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 余白埋め：情報バー -->
+          <div class="mt-5 border-t-2 border-black pt-4 grid sm:grid-cols-3 gap-2 font-black text-sm">
+            <div class="border-2 border-black px-3 py-2">先払い → 番号札</div>
+            <div class="border-2 border-black px-3 py-2">車でもOK / テント席</div>
+            <div class="border-2 border-black px-3 py-2">変更はInstagramで当日</div>
+          </div>
+        </div>
+
+        <!-- 右：見た目が整う"営業情報カード" -->
+        <div class="lg:col-span-5 space-y-6">
+
+          <!-- 営業時間カード -->
+          <div class="bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-6">
+            <div class="text-xs font-black tracking-widest text-neutral-600">営業時間</div>
+            <div class="mt-2 text-3xl sm:text-4xl font-black">
+              火・水・木 <span class="text-red-600">20:00–翌3:00</span>
+            </div>
+            <div class="mt-3 text-base sm:text-lg font-black text-neutral-700">
+              変更・休業・出店場所はInstagramで更新
+            </div>
+            <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+               class="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-4 rounded bg-red-600 hover:bg-red-700 text-white font-black text-base sm:text-lg shadow-[4px_4px_0_0_rgba(0,0,0,0.7)] border-2 border-black">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </span>
+              <span>今夜の営業を見る（Instagram）</span>
+            </a>
+          </div>
+
+          <!-- アクセス要点カード -->
+          <div class="bg-white text-neutral-900 border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-6">
+            <div class="text-xs font-black tracking-widest text-neutral-600">アクセス</div>
+            <div class="mt-2 text-xl sm:text-2xl font-black">千葉県市原市八幡 2049-2</div>
+            <div class="mt-2 text-base sm:text-lg font-black text-neutral-700">
+              JR八幡宿駅 西口 徒歩約12分
+            </div>
+            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+               class="mt-5 w-full inline-flex items-center justify-center gap-2 px-5 py-4 rounded bg-emerald-700 hover:bg-emerald-800 text-white font-black text-base sm:text-lg shadow-[4px_4px_0_0_rgba(0,0,0,0.7)] border-2 border-black">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </span>
+              <span>地図で行く</span>
+            </a>
+
+            <!-- ✅下の余白を「来る前にこれだけ」に変える（押し売り感ゼロ） -->
+            <div class="mt-5 border-t-2 border-black pt-4">
+              <div class="text-xs font-black tracking-widest text-neutral-600">来る前にこれだけ</div>
+
+              <div class="mt-3 grid gap-2">
+                <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                  <div class="font-black">迷ったら</div>
+                  <div class="font-black text-red-600">ネギラーメン（¥850）</div>
+                </div>
+
+                <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                  <div class="font-black">締めに刺さる</div>
+                  <div class="font-black text-red-600">辛ネギ（¥950）</div>
+                </div>
+
+                <div class="flex items-center justify-between border-2 border-black px-3 py-2">
+                  <div class="font-black">現地限定</div>
+                  <div class="font-black">訳あり餃子（¥200）<span class="text-neutral-500">※通販なし</span></div>
+                </div>
+              </div>
+
+              <div class="mt-3 text-sm font-black text-neutral-700">
+                車でもOK／テント席あり／先払い→番号札
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-16 border-t border-white/10 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight">写真でわかる</h2>
+      <p class="mt-2 text-white/70 font-black text-lg">見て決まる。</p>
+
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <button onclick="window.open('image/gaikan2.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/gaikan2.jpg" alt="外観" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+        <button onclick="window.open('image/negira-men.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/negira-men.jpg" alt="ネギラーメン" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+        <button onclick="window.open('image/karanegi.ramen.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/karanegi.ramen.jpg" alt="辛ネギ" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+        <button onclick="window.open('image/ramen.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/ramen.jpg" alt="ラーメン" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+        <button onclick="window.open('image/gyouza.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/gyouza.jpg" alt="餃子" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+        <button onclick="window.open('image/zaseki.jpg', '_blank')" class="bg-white border-4 border-black shadow-[0_14px_30px_rgba(0,0,0,0.5),5px_5px_0_0_rgba(0,0,0,0.85)] overflow-hidden hover:scale-[1.02] transition-transform" title="拡大">
+          <div class="aspect-[4/3] w-full"><img src="image/zaseki.jpg" alt="座席" class="w-full h-full object-cover block" loading="lazy"></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide" class="py-16 bg-neutral-900 border-t border-white/10 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight">はじめての方へ</h2>
+      <p class="mt-3 text-white/75 font-black text-lg">初めてでも大丈夫。先払い → 番号札 → 呼ばれたら受け取るだけ。</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-white text-neutral-900 border-4 border-black p-6 shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="w-10 h-10 bg-yellow-300 border-2 border-black flex items-center justify-center font-black">1</div>
+          <div class="mt-4 text-2xl font-black">注文・支払い</div>
+          <p class="mt-2 text-base font-black text-neutral-700 leading-relaxed">カウンターで注文→その場で支払い（現金/PayPay）</p>
+        </div>
+        <div class="bg-white text-neutral-900 border-4 border-black p-6 shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="w-10 h-10 bg-yellow-300 border-2 border-black flex items-center justify-center font-black">2</div>
+          <div class="mt-4 text-2xl font-black">番号札</div>
+          <p class="mt-2 text-base font-black text-neutral-700 leading-relaxed">番号で呼びます。席か車で待つ。</p>
+        </div>
+        <div class="bg-white text-neutral-900 border-4 border-black p-6 shadow-[6px_6px_0_0_rgba(0,0,0,0.85)]">
+          <div class="w-10 h-10 bg-yellow-300 border-2 border-black flex items-center justify-center font-black">3</div>
+          <div class="mt-4 text-2xl font-black">セルフ</div>
+          <p class="mt-2 text-base font-black text-neutral-700 leading-relaxed">水・返却はセルフ。分別に協力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ACCESS：地図フルブリード（スマホ短め/PC長め） -->
+  <section id="access" class="py-16 border-t border-white/10 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight">アクセス</h2>
+    </div>
+
+    <!-- ✅フルブリード領域 -->
+    <div class="mt-8 w-full border-y-4 border-black bg-neutral-950">
+
+      <!-- 上：情報カード（地図に被せず"上に置く"ので切れない） -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="bg-white text-neutral-900 border-4 border-black
+                    shadow-[6px_6px_0_0_rgba(0,0,0,0.85)] p-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <div class="text-xs font-black tracking-widest text-neutral-600">住所</div>
+              <div class="mt-2 text-xl sm:text-2xl font-black">千葉県市原市八幡2049-2</div>
+              <div class="mt-1 text-base font-black text-neutral-700">JR八幡宿駅 西口 徒歩約12分</div>
+            </div>
+            <div>
+              <div class="text-xs font-black tracking-widest text-neutral-600">営業</div>
+              <div class="mt-2 text-xl sm:text-2xl font-black">火・水・木 20:00–翌3:00</div>
+              <div class="mt-1 text-base font-black text-neutral-700">変更・休業・出店場所はInstagramで当日更新</div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+               class="inline-flex w-full items-center justify-center gap-2 px-5 py-4 rounded bg-emerald-700 hover:bg-emerald-800
+                      text-white font-black text-lg border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.75)]">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </span>
+              <span>Google Mapsで開く</span>
+            </a>
+
+            <a data-ig-link href="https://www.instagram.com/rs_yawatajuku_kc/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex w-full items-center justify-center gap-2 px-5 py-4 rounded bg-red-600 hover:bg-red-700
+                      text-white font-black text-lg border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,0.75)]">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </span>
+              <span>今日やってる？を確認</span>
+            </a>
+          </div>
+
+          <!-- ✅スマホ用：補足はカード内に収める（地図に重ならない） -->
+          <p class="mt-4 text-sm font-black text-neutral-600">
+            初めてでも大丈夫。先払い → 番号札 → 呼ばれたら受け取るだけ。
+          </p>
+        </div>
+      </div>
+
+      <!-- 地図：フルブリード（PC）/縦長すぎない（SP） -->
+      <div class="relative">
+        <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen
+                    lg:left-auto lg:right-auto lg:ml-0 lg:mr-0 lg:w-full
+                    bg-neutral-900 border-2 border-white/10 overflow-hidden rounded-none lg:rounded-xl">
+          <!-- SPは縦長になりすぎない高さ、PCは横長 -->
+          <div class="w-full h-[52svh] sm:h-[46vh] lg:h-[520px]">
+            <iframe
+              id="mapEmbed"
+              class="w-full h-full"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?output=embed&q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2">
+            </iframe>
+          </div>
+          <div class="p-4 flex items-center justify-between gap-3 text-white">
+            <a data-map-link href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E5%85%AB%E5%B9%A12049-2" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-3 rounded bg-emerald-700 hover:bg-emerald-800 font-black text-base
+                     shadow-[4px_4px_0_0_rgba(0,0,0,0.7)] border-2 border-black">
+              <span class="inline-flex items-center justify-center w-5 h-5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </span>
+              <span>地図</span>
+            </a>
+            <div class="text-xs font-black text-white/50">&copy; <span id="year2"></span> ラーメンショップ 八幡宿キッチンカー店</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-10"></div>
+
+  <script>
+    // ===== 固定情報（URL一元管理）=====
+    const INSTAGRAM_URL = "https://www.instagram.com/rs_yawatajuku_kc/";
+    const SHOP_ADDRESS = "千葉県市原市八幡2049-2";
+    const MAP_QUERY = encodeURIComponent(SHOP_ADDRESS);
+    const MAP_URL = `https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`;
+    const MAP_EMBED = `https://www.google.com/maps?q=${MAP_QUERY}&output=embed`;
+
+    // ===== 価格一元管理 =====
+    const MENU_PRICE = {
+      ramen: { name: "ラーメン", price: 750 },
+      negi: { name: "ネギラーメン", price: 850 },
+      karanegi: { name: "辛ネギ", price: 950 },
+      chashu: { name: "チャーシュー", price: 1000 },
+      negichashu: { name: "ネギチャーシュー", price: 1100 },
+      umakaranegichashu: { name: "旨辛ネギチャーシュー", price: 1200 },
+      gyoza: { name: "訳あり餃子（5個）", price: 200 },
+      motsu: { name: "つまみモツハラミ", price: 500 },
+      niramoyashi: { name: "プチにらもやし", price: 50 },
+      hanrice: { name: "半ライス", price: 100 },
+      rice: { name: "ライス", price: 200 },
+      orion: { name: "オリオンビール", price: 500 },
+      watta: { name: "WATTA", price: 400 },
+      horumonEgg: { name: "ホルモンエッグごはん", price: 500 },
+    };
+
+    function formatPrice(price) {
+      return "¥" + price.toLocaleString();
+    }
+
+    function renderPrices() {
+      // HERO（存在する時だけ入れる）
+      const pr = document.getElementById("price-ramen");
+      if (pr) pr.textContent = formatPrice(MENU_PRICE.ramen.price);
+
+      const pn = document.getElementById("price-negi");
+      if (pn) pn.textContent = formatPrice(MENU_PRICE.negi.price);
+
+      const heroNegi = document.getElementById("hero-negi");
+      if (heroNegi) heroNegi.textContent = formatPrice(MENU_PRICE.negi.price);
+
+      // MENU cards
+      document.getElementById("menu-negi").textContent = formatPrice(MENU_PRICE.negi.price);
+      document.getElementById("menu-karanegi").textContent = formatPrice(MENU_PRICE.karanegi.price);
+      document.getElementById("menu-gyoza").textContent = formatPrice(MENU_PRICE.gyoza.price);
+      document.getElementById("menu-horumonegg").textContent = formatPrice(MENU_PRICE.horumonEgg.price);
+
+      // ===== 看板（全メニュー）描画 =====
+      const board = document.getElementById('price-board');
+      if (board) {
+        const groups = [
+          { title: 'ラーメン', keys: ['ramen','negi','karanegi','chashu','negichashu','umakaranegichashu'] },
+          { title: 'サイド', keys: ['gyoza','motsu','horumonEgg','niramoyashi'] },
+          { title: 'ごはん', keys: ['hanrice','rice'] },
+          { title: 'ドリンク', keys: ['orion','watta'] },
+        ];
+
+        board.innerHTML = groups.map(g => `
+          <div>
+            <div class="mb-3 inline-flex items-center gap-2 px-3 py-2 bg-yellow-300 text-neutral-900 font-black border-2 border-black shadow-[3px_3px_0_0_rgba(0,0,0,0.75)]">
+              ${g.title}
+            </div>
+
+            <div class="space-y-3">
+              ${g.keys.map(k => `
+                <div class="flex items-baseline justify-between gap-4">
+                  <div class="font-black text-xl sm:text-2xl text-white leading-tight tracking-wide">
+                    ${MENU_PRICE[k].name}
+                  </div>
+                  <div class="font-black text-3xl sm:text-4xl text-white tabular-nums whitespace-nowrap">
+                    ${formatPrice(MENU_PRICE[k].price)}
+                  </div>
+                </div>
+                <div class="h-[2px] bg-white/25"></div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    lucide.createIcons();
+    const currentYear = new Date().getFullYear();
+    const year = document.getElementById("year");
+    if (year) year.textContent = currentYear;
+    const year2 = document.getElementById("year2");
+    if (year2) year2.textContent = currentYear;
+    renderPrices();
+
+    // ===== リンク一括設定（DOMロード後に確実に実行）=====
+    function setAllLinks() {
+      document.querySelectorAll("[data-map-link]").forEach(el => {
+        el.href = MAP_URL;
+      });
+      document.querySelectorAll("[data-ig-link]").forEach(el => {
+        el.href = INSTAGRAM_URL;
+      });
+
+      const mapEmbed = document.getElementById("mapEmbed");
+      if (mapEmbed) {
+        const want = MAP_EMBED;
+        if (!mapEmbed.src || mapEmbed.src === "about:blank") {
+          mapEmbed.src = want;
+        } else {
+          // たまに別の処理で壊されるのを防ぐため、常に上書きでもOK
+          mapEmbed.src = want;
+        }
+      }
+    }
+    // 即時実行 + loadイベントでも実行（確実に）
+    setAllLinks();
+    window.addEventListener("load", setAllLinks);
+
+    // ✅IG/MAPリンク：hrefが # のままでも必ず飛ばす保険
+    document.addEventListener("click", (e) => {
+      const ig = e.target.closest("[data-ig-link]");
+      if (ig) {
+        e.preventDefault();
+        window.open(INSTAGRAM_URL, "_blank", "noopener,noreferrer");
+        return;
+      }
+
+      const mp = e.target.closest("[data-map-link]");
+      if (mp) {
+        e.preventDefault();
+        window.open(MAP_URL, "_blank", "noopener,noreferrer");
+        return;
+      }
+    }, { capture: true });
+
+    // メニュー看板モーダル
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        if (!document.getElementById("mobile-menu").classList.contains("hidden")) toggleMenu();
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+      } else {
+        menu.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+    }
+
+    // Scroll Spy + header style
+    window.addEventListener("scroll", function () {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const header = document.getElementById("header-container");
+
+      if (scrollY > 10) {
+        header.classList.remove("bg-gradient-to-b", "from-neutral-950", "to-neutral-950/70");
+        header.classList.add("bg-neutral-950/95", "backdrop-blur");
+      } else {
+        header.classList.add("bg-gradient-to-b", "from-neutral-950", "to-neutral-950/70");
+        header.classList.remove("bg-neutral-950/95", "backdrop-blur");
+      }
+
+      const sections = ["home", "menu", "today", "gallery", "guide", "access"];
+      let currentSection = "home";
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 130 && rect.bottom >= 130) {
+            currentSection = sectionId;
+            break;
+          }
+        }
+      }
+
+      document.querySelectorAll(".nav-link").forEach((btn) => {
+        if (btn.dataset.target === currentSection) {
+          btn.classList.add("text-yellow-300");
+          btn.classList.remove("text-white/80", "hover:text-yellow-300");
+        } else {
+          btn.classList.remove("text-yellow-300");
+          btn.classList.add("text-white/80", "hover:text-yellow-300");
+        }
+      });
+
+      document.querySelectorAll(".mobile-nav-link").forEach((btn) => {
+        if (btn.dataset.target === currentSection) {
+          btn.classList.add("bg-yellow-300", "text-neutral-900");
+          btn.classList.remove("bg-white/5", "hover:bg-white/10");
+        } else {
+          btn.classList.remove("bg-yellow-300", "text-neutral-900");
+          btn.classList.add("bg-white/5", "hover:bg-white/10");
+        }
+      });
+    });
+
+    // ヘッダー高さを自動同期
+    function syncHeaderHeight(){
+      const header = document.getElementById('header-container');
+      if(!header) return;
+      document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    }
+    window.addEventListener('load', syncHeaderHeight);
+    window.addEventListener('resize', syncHeaderHeight);
+    syncHeaderHeight();
+  </script>
+</body>
+</html>
